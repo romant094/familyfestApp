@@ -61,12 +61,14 @@ const collectAnswers = () => {
                 id: key,
                 answers: []
             };
+            let isAnswer = false;
             input.addEventListener('change', function () {
                 if (this.getAttribute('type') === 'radio') {
                     answers[key - 1].answers[0] = {
                         value: this.value,
                         isCorrect: this.dataset.correct ? this.dataset.correct : null
-                    }
+                    };
+                    isAnswer = true;
                 } else {
                     answers[key - 1].answers = [];
                     inputs.forEach((inp) => {
@@ -75,14 +77,24 @@ const collectAnswers = () => {
                             isChecked: inp.checked,
                             isCorrect: inp.dataset.correct ? inp.dataset.correct : null
                         });
-                    })
+                    });
+                    isAnswer = anyCheckboxIsChecked(inputs);
                 }
-
-                console.log(answers[key - 1]);
-                // console.log(answers);
+                buttonsNext[key-1].disabled = !isAnswer;
             });
         });
     });
 };
 
 collectAnswers();
+
+const anyCheckboxIsChecked = (inputs) => {
+    let isChecked = false;
+    for (let i = 0, length = inputs.length; i < length; i++) {
+        if (inputs[i].checked) {
+            isChecked = true;
+            break;
+        }
+    }
+    return isChecked;
+};
