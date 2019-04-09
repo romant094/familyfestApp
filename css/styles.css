@@ -34,7 +34,7 @@ main .test__block-content {
   flex-direction: column;
   align-items: center;
 }
-main .test__block-content p {
+main .test__block-content .text {
   font-size: 1.5rem;
   margin-bottom: 2rem;
 }
