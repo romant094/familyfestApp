@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>Hello, world!</title>
+</head>
+<body>
+
+<noscript>Для работы приложения необходимо включить поддержку Javascript!</noscript>
+
+<main>
+    <div class="test col-12">
+        <div class="col-8 test__block animated fadeIn ">
+            <div class="container">
+                <div class="test__block-content">
+                    <p>
+                        На фестивале больше 20 игровых и образовательных зон, активности в которых происходят
+                        одновременно. Чтобы не пропустить ничего интересного и важного, вы можете заранее составить
+                        оптимальный для себя маршрут движения по зонам фестиваля. Для этого ответьте, пожалуйста, на
+                        несколько вопросов.
+                    </p>
+                    <button class="btn btn-lg btn-primary" data-question="0">Начать</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-8 col-lg-6 mx-auto test__block animated fadeIn disabled">
+            <div class="container">
+                <div class="test__block-content">
+                    <p>
+                        Вопрос 1
+                    </p>
+                    <button class="btn btn-lg btn-primary" data-question="1">Далее</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-8 col-lg-6 mx-auto test__block animated fadeIn disabled">
+            <div class="container">
+                <div class="test__block-content">
+                    <p>
+                        Вопрос 2
+                    </p>
+                    <button class="btn btn-lg btn-primary" data-question="2">Далее</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-8 col-lg-6 mx-auto test__progress disabled">
+            <div class="test__progress-current">
+                Текущий вопрос: <span id="current-question">0</span> / 20
+            </div>
+            <div class="progress">
+                <div class="progress-bar" id="progress" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

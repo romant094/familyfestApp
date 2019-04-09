@@ -1,0 +1,42 @@
+noscript {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  font-size: 30px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.disabled {
+  display: none;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .test__block {
+  padding: 50px 10px;
+  border: 1px solid black;
+  border-radius: 0.8rem;
+  margin-bottom: 32px;
+}
+main .test__block-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .test__block-content p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/*# sourceMappingURL=styles.css.map */
