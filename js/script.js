@@ -11,7 +11,7 @@ const questionsCount = 20,
     currentQuestionBlock = d.querySelector('#current-question');
 
 buttonsPrev[0].disabled = true;
-const lastIndex = buttonsNext.length-1;
+const lastIndex = buttonsNext.length - 1;
 buttonsNext[lastIndex].disabled = true;
 
 const currentPercent = () => {
@@ -37,7 +37,7 @@ buttonsNext.forEach(function (btn, index) {
 
 const changeQuestion = function (elem) {
     let newQuestion = +elem.dataset.question,
-    diff = newQuestion - currentQuestion;
+        diff = newQuestion - currentQuestion;
 
     testBlocks[currentQuestion].classList.add('disabled');
     testBlocks[currentQuestion + diff].classList.remove('disabled');
@@ -46,3 +46,43 @@ const changeQuestion = function (elem) {
     currentQuestionBlock.textContent = currentQuestion;
     currentPercent();
 };
+
+let answers = [];
+
+const collectAnswers = () => {
+    testBlocks.forEach((item, key) => {
+        if (key === 0) {
+            return
+        }
+        const inputs = item.querySelectorAll('input');
+
+        inputs.forEach((input) => {
+            answers[key - 1] = {
+                id: key,
+                answers: []
+            };
+            input.addEventListener('change', function () {
+                if (this.getAttribute('type') === 'radio') {
+                    answers[key - 1].answers[0] = {
+                        value: this.value,
+                        isCorrect: this.dataset.correct ? this.dataset.correct : null
+                    }
+                } else {
+                    answers[key - 1].answers = [];
+                    inputs.forEach((inp) => {
+                        answers[key - 1].answers.push({
+                            value: inp.value,
+                            isChecked: inp.checked,
+                            isCorrect: inp.dataset.correct ? inp.dataset.correct : null
+                        });
+                    })
+                }
+
+                console.log(answers[key - 1]);
+                // console.log(answers);
+            });
+        });
+    });
+};
+
+collectAnswers();
