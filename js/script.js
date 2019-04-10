@@ -6,7 +6,9 @@ const questionsCount = 20,
     progressBar = d.querySelector('#progress'),
     testBlocks = d.querySelectorAll('.test__block'),
     buttonStart = d.querySelector('button.start'),
-    buttonsPrev = d.querySelectorAll('button.prev'),
+    buttonEnd = d.querySelector('button.end'),
+    buttonRestart = d.querySelector('button.restart'),
+    buttonsPrev = d.querySelectorAll('button.prev, button.next'),
     buttonsNext = d.querySelectorAll('button.next'),
     currentQuestionBlock = d.querySelector('#current-question');
 
@@ -70,11 +72,11 @@ const collectAnswers = () => {
                     };
                     isAnswer = true;
                     if (key === 1 && answers[key - 1].answers[0].value === '2') {
-                        setButtonQuestionNumber(buttonsNext[0],4);
-                        setButtonQuestionNumber(buttonsPrev[3],1);
+                        setButtonQuestionNumber(buttonsNext[0], 4);
+                        setButtonQuestionNumber(buttonsPrev[3], 1);
                     } else {
-                        setButtonQuestionNumber(buttonsNext[0],2);
-                        setButtonQuestionNumber(buttonsPrev[3],3);
+                        setButtonQuestionNumber(buttonsNext[0], 2);
+                        setButtonQuestionNumber(buttonsPrev[3], 3);
                     }
                 } else {
                     answers[key - 1].answers = [];
@@ -82,7 +84,7 @@ const collectAnswers = () => {
                         answers[key - 1].answers.push({
                             value: inp.value,
                             isChecked: inp.checked,
-                            isCorrect: inp.dataset.correct ? inp.dataset.correct : null
+                            isCorrect: inp.dataset.correct ? true : null
                         });
                     });
                     isAnswer = anyCheckboxIsChecked(inputs);
@@ -110,3 +112,22 @@ const anyCheckboxIsChecked = (inputs) => {
 const setButtonQuestionNumber = (elem, value) => {
     elem.setAttribute('data-question', value);
 };
+
+const results = {
+    bad: 'Ого, ваши финансовые знания на достойном уровне, но нет предела совершенству! Предлагаем вам следующий маршрут по площадке Семейного финансового фестиваля!',
+    good: 'Упс. Ваши финансовые знания ниже среднего. Но учиться никогда не поздно! Предлагаем вам следующий маршрут по площадке Семейного финансового фестиваля!'
+};
+
+buttonRestart.addEventListener('click', function () {
+    answers = [];
+    const inputs = d.querySelectorAll('input');
+    inputs.forEach((input) => {
+        if (input.checked) {
+            input.checked = false;
+        }
+    });
+    buttonsNext.forEach((btn)=>{
+        btn.disabled = true;
+    });
+    changeQuestion(this);
+});
