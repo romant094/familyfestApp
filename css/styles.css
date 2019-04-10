@@ -36,6 +36,8 @@ main .test__block-content {
 }
 main .test__block-content .text {
   font-size: 1.5rem;
+}
+main .test__block-content .text:first-child {
   margin-bottom: 2rem;
 }
 
