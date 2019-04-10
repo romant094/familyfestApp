@@ -25,6 +25,11 @@ buttonStart.addEventListener('click', function () {
     progressWrap.classList.remove('disabled');
 });
 
+buttonEnd.addEventListener('click', function () {
+    changeQuestion(this);
+    progressWrap.classList.remove('disabled');
+});
+
 buttonsPrev.forEach(function (btn, index) {
     btn.addEventListener('click', function () {
         changeQuestion(this);
@@ -33,6 +38,9 @@ buttonsPrev.forEach(function (btn, index) {
 
 buttonsNext.forEach(function (btn, index) {
     btn.addEventListener('click', function () {
+        if (index === lastIndex){
+            progressWrap.classList.add('disabled');
+        }
         changeQuestion(this);
     })
 });
@@ -126,8 +134,28 @@ buttonRestart.addEventListener('click', function () {
             input.checked = false;
         }
     });
-    buttonsNext.forEach((btn)=>{
+    buttonsNext.forEach((btn) => {
         btn.disabled = true;
     });
     changeQuestion(this);
 });
+
+//TODO remove devFunc
+const devFunc = () => {
+    const allQ = d.querySelector('.all-questions');
+
+    for (let i = 0; i < 22; i++) {
+        const elem = d.createElement('SPAN');
+        elem.textContent = i + 1;
+        elem.style.padding = 10 + 'px';
+        elem.style.cursor = 'pointer';
+        elem.setAttribute('data-question', i+1);
+        allQ.appendChild(elem);
+    }
+    d.querySelectorAll('.all-questions span').forEach((item)=>{
+        item.addEventListener('click', function () {
+            changeQuestion(this);
+        })
+    })
+};
+devFunc();
