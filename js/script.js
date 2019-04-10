@@ -69,6 +69,13 @@ const collectAnswers = () => {
                         isCorrect: this.dataset.correct ? this.dataset.correct : null
                     };
                     isAnswer = true;
+                    if (key === 1 && answers[key - 1].answers[0].value === '2') {
+                        setButtonQuestionNumber(buttonsNext[0],4);
+                        setButtonQuestionNumber(buttonsPrev[3],1);
+                    } else {
+                        setButtonQuestionNumber(buttonsNext[0],2);
+                        setButtonQuestionNumber(buttonsPrev[3],3);
+                    }
                 } else {
                     answers[key - 1].answers = [];
                     inputs.forEach((inp) => {
@@ -80,7 +87,8 @@ const collectAnswers = () => {
                     });
                     isAnswer = anyCheckboxIsChecked(inputs);
                 }
-                buttonsNext[key-1].disabled = !isAnswer;
+                console.log(answers[key - 1]);
+                buttonsNext[key - 1].disabled = !isAnswer;
             });
         });
     });
@@ -97,4 +105,8 @@ const anyCheckboxIsChecked = (inputs) => {
         }
     }
     return isChecked;
+};
+
+const setButtonQuestionNumber = (elem, value) => {
+    elem.setAttribute('data-question', value);
 };
