@@ -1,4 +1,6 @@
-let currentQuestion = 0;
+let currentQuestion = 0,
+    correctAnswers = 0,
+    answers = [];
 
 const questionsCount = 20,
     d = document,
@@ -7,13 +9,20 @@ const questionsCount = 20,
     testBlocks = d.querySelectorAll('.test__block'),
     buttonStart = d.querySelector('button.start'),
     buttonEnd = d.querySelector('button.end'),
-    buttonRestart = d.querySelector('button.restart'),
+    // buttonRestart = d.querySelector('button.restart'),
     buttonsPrev = d.querySelectorAll('button.prev, button.next'),
     buttonsNext = d.querySelectorAll('button.next'),
-    currentQuestionBlock = d.querySelector('#current-question');
+    currentQuestionBlock = d.querySelector('#current-question'),
+    resultCorrectAnswers = d.querySelector('#correct-answers'),
+    resultFinalText = d.querySelector('#text-end'),
+    resultTextWrap = d.querySelector('#result-text-wrap'),
+    lastIndex = buttonsNext.length - 1,
+    results = {
+        good: 'Ого, ваши финансовые знания на достойном уровне, но нет предела совершенству! Предлагаем вам следующий маршрут по площадке Семейного финансового фестиваля!',
+        bad: 'Упс. Ваши финансовые знания ниже среднего. Но учиться никогда не поздно! Предлагаем вам следующий маршрут по площадке Семейного финансового фестиваля!'
+    };
 
 buttonsPrev[0].disabled = true;
-const lastIndex = buttonsNext.length - 1;
 buttonsNext[lastIndex].disabled = true;
 
 const currentPercent = () => {
@@ -22,12 +31,12 @@ const currentPercent = () => {
 
 buttonStart.addEventListener('click', function () {
     changeQuestion(this);
-    progressWrap.classList.remove('disabled');
 });
 
 buttonEnd.addEventListener('click', function () {
     changeQuestion(this);
-    progressWrap.classList.remove('disabled');
+    countAnswers();
+    renderResults();
 });
 
 buttonsPrev.forEach(function (btn, index) {
@@ -38,16 +47,20 @@ buttonsPrev.forEach(function (btn, index) {
 
 buttonsNext.forEach(function (btn, index) {
     btn.addEventListener('click', function () {
-        if (index === lastIndex){
-            progressWrap.classList.add('disabled');
-        }
         changeQuestion(this);
     })
 });
 
 const changeQuestion = function (elem) {
     let newQuestion = +elem.dataset.question,
-        diff = newQuestion - currentQuestion;
+        diff = newQuestion - currentQuestion,
+        progressIsVisible = false;
+
+    if (newQuestion > 0 && newQuestion < 21) {
+        progressIsVisible = true;
+    }
+
+    progressIsVisible ? progressWrap.classList.remove('disabled') : progressWrap.classList.add('disabled');
 
     testBlocks[currentQuestion].classList.add('disabled');
     testBlocks[currentQuestion + diff].classList.remove('disabled');
@@ -57,7 +70,6 @@ const changeQuestion = function (elem) {
     currentPercent();
 };
 
-let answers = [];
 
 const collectAnswers = () => {
     testBlocks.forEach((item, key) => {
@@ -76,6 +88,7 @@ const collectAnswers = () => {
                 if (this.getAttribute('type') === 'radio') {
                     answers[key - 1].answers[0] = {
                         value: this.value,
+                        isChecked: this.checked,
                         isCorrect: this.dataset.correct ? this.dataset.correct : null
                     };
                     isAnswer = true;
@@ -121,12 +134,7 @@ const setButtonQuestionNumber = (elem, value) => {
     elem.setAttribute('data-question', value);
 };
 
-const results = {
-    bad: 'Ого, ваши финансовые знания на достойном уровне, но нет предела совершенству! Предлагаем вам следующий маршрут по площадке Семейного финансового фестиваля!',
-    good: 'Упс. Ваши финансовые знания ниже среднего. Но учиться никогда не поздно! Предлагаем вам следующий маршрут по площадке Семейного финансового фестиваля!'
-};
-
-buttonRestart.addEventListener('click', function () {
+/*buttonRestart.addEventListener('click', function () {
     answers = [];
     const inputs = d.querySelectorAll('input');
     inputs.forEach((input) => {
@@ -138,7 +146,49 @@ buttonRestart.addEventListener('click', function () {
         btn.disabled = true;
     });
     changeQuestion(this);
-});
+});*/
+
+const countAnswers = () => {
+    correctAnswers = 0;
+    answers.forEach((answer, key) => {
+        let checked = 0,
+            correct = 0;
+
+        answer.answers.forEach((item) => {
+            if (item.isChecked) {
+                checked++
+            }
+            if (item.isCorrect) {
+                correct++
+            }
+        });
+
+        if (checked !== 0 && (checked === correct)) {
+            correctAnswers++
+        }
+
+        console.log('question number', key);
+        console.log('checked', checked);
+        console.log('correct', correct);
+        console.log('correctAnswers', correctAnswers);
+
+    })
+};
+
+const renderResults = () => {
+    correctAnswers = 9;
+    let resultText = '';
+
+    if (correctAnswers < 8) {
+        resultTextWrap.classList.add('text-danger');
+        resultText = results.bad;
+    } else{
+        resultTextWrap.classList.add('text-success');
+        resultText = results.good;
+    }
+    resultCorrectAnswers.textContent = correctAnswers;
+    resultFinalText.textContent = resultText;
+};
 
 //TODO remove devFunc
 const devFunc = () => {
@@ -149,11 +199,16 @@ const devFunc = () => {
         elem.textContent = i + 1;
         elem.style.padding = 10 + 'px';
         elem.style.cursor = 'pointer';
-        elem.setAttribute('data-question', i+1);
+        elem.setAttribute('data-question', i + 1);
         allQ.appendChild(elem);
     }
-    d.querySelectorAll('.all-questions span').forEach((item)=>{
+    d.querySelectorAll('.all-questions span').forEach((item) => {
+        item.style.fontWeight = '400';
+
         item.addEventListener('click', function () {
+            if (currentQuestion === +item.dataset.question) {
+                item.style.fontWeight = '700';
+            }
             changeQuestion(this);
         })
     })
