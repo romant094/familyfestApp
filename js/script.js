@@ -20,7 +20,24 @@ const questionsCount = 20,
     results = {
         good: 'Ого, ваши финансовые знания на достойном уровне, но нет предела совершенству! Предлагаем вам следующий маршрут по площадке Семейного финансового фестиваля!',
         bad: 'Упс. Ваши финансовые знания ниже среднего. Но учиться никогда не поздно! Предлагаем вам следующий маршрут по площадке Семейного финансового фестиваля!'
-    };
+    },
+    locations = [
+        {
+            id: 1,
+            locations: 'Университет, Офис консультантов, Городская площадь, Финансовый центр, Сквер, Выставка плакатов.'
+        },
+        {
+            id: 2,
+            locations: 'Клуб «60 секунд», Игровая площадка, Сквер, Беседка, Школа, Финансовый центр, Университет.'
+        },
+        {
+            id: 3,
+            locations: {
+                children: 'Клуб «60 секунд», Игровая площадка, Сквер, Беседка, Библиотека, Школа.',
+                grownUps: 'Университет, Офис консультантов, Городская площадь, Сквер, Выставка плакатов.'
+            }
+        }
+    ];
 
 buttonsPrev[0].disabled = true;
 buttonsNext[lastIndex].disabled = true;
@@ -39,13 +56,13 @@ buttonEnd.addEventListener('click', function () {
     renderResults();
 });
 
-buttonsPrev.forEach(function (btn, index) {
+buttonsPrev.forEach(function (btn) {
     btn.addEventListener('click', function () {
         changeQuestion(this);
     })
 });
 
-buttonsNext.forEach(function (btn, index) {
+buttonsNext.forEach(function (btn) {
     btn.addEventListener('click', function () {
         changeQuestion(this);
     })
@@ -176,18 +193,37 @@ const countAnswers = () => {
 };
 
 const renderResults = () => {
-    correctAnswers = 9;
+    // correctAnswers = 9;
     let resultText = '';
 
     if (correctAnswers < 8) {
         resultTextWrap.classList.add('text-danger');
         resultText = results.bad;
-    } else{
+    } else {
         resultTextWrap.classList.add('text-success');
         resultText = results.good;
     }
     resultCorrectAnswers.textContent = correctAnswers;
     resultFinalText.textContent = resultText;
+};
+
+const chooseRoute = () => {
+    let routeNumber = 1;
+    const firstAnswer = answers[0].answers[0].value,
+        secondAnswer = answers[1].answers[0].value;
+    if (firstAnswer === '1' && secondAnswer === '1') {
+        routeNumber = 2;
+    }
+    if (firstAnswer === '1' && secondAnswer === '2') {
+        routeNumber = 3;
+    }
+    if (firstAnswer === '1' && secondAnswer === '3') {
+        routeNumber = 4;
+    }
+};
+
+const renderRoutes = () => {
+
 };
 
 //TODO remove devFunc

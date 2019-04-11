@@ -45,6 +45,10 @@ h1 {
   font-size: 18px;
 }
 
+.route-link {
+  font-size: 22px;
+}
+
 main {
   width: 100vw;
   height: 100vh;
