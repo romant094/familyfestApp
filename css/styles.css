@@ -16,6 +16,10 @@ h1 {
   display: none;
 }
 
+.btn-link--custom {
+  padding-top: 0;
+}
+
 .noscipt {
   position: absolute;
   display: flex;
@@ -32,6 +36,13 @@ h1 {
 .list-group-item.custom {
   border: none;
   padding: 0;
+  margin-bottom: 10px;
+}
+.list-group-item.custom label {
+  margin-bottom: 0;
+}
+.list-group-item.custom label span {
+  font-size: 18px;
 }
 
 main {
@@ -55,11 +66,14 @@ main .test__block-content {
 main .test__block-content .text {
   font-size: 1.5rem;
 }
-main .test__block-content .text__questions, main .test__block-content .text__answers {
+main .test__block-content .text__question, main .test__block-content .text__answers {
   margin-bottom: 1rem;
 }
 main .results__text {
   font-size: 18px;
+}
+main .results__result {
+  font-size: 26px;
 }
 
 /*# sourceMappingURL=styles.css.map */

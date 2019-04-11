@@ -18,7 +18,9 @@
 
 <noscript>
     <div class="noscipt">
-        <div class="noscipt__content col-6">Для работы приложения, пожалуйста, включите поддержку Javascript и перезагрузите страницу.</div>
+        <div class="noscipt__content col-6">Для работы приложения, пожалуйста, включите поддержку Javascript и
+            перезагрузите страницу.
+        </div>
     </div>
 </noscript>
 
@@ -27,7 +29,7 @@
         <div class="col-12 col-sm-8 col-xl-6 mx-auto test__block animated fadeIn ">
             <div class="container">
                 <div class="test__block-content row">
-                    <div class="text col-12">
+                    <div class="text col-12 mb-3">
                         На фестивале больше 20 игровых и образовательных зон, активности в которых происходят
                         одновременно. Чтобы не пропустить ничего интересного и важного, вы можете заранее составить
                         оптимальный для себя маршрут движения по зонам фестиваля. Для этого ответьте, пожалуйста, на
@@ -572,7 +574,8 @@
                 <div class="test__block-content row">
                     <div class="text col-12">
                         <div class="text__question">
-                            13. Самая высокая плата за пользование средствами с кредитной карты взимается: (выберите все верные варианты ответа)
+                            13. Самая высокая плата за пользование средствами с кредитной карты взимается: (выберите все
+                            верные варианты ответа)
                         </div>
                         <div class="text__answers">
                             <ul class="list-group">
@@ -935,10 +938,11 @@
             <div class="container">
                 <div class="test__block-content row">
                     <div class="text col-12">
-                        Спасибо за прохождение нашего теста! Нажмите на кнопку "Завершить", чтобы узнать результаты.
+                        <p class="text-center">Спасибо за ваши ответы!</p>
+                        <p>Руководствуясь ими, мы составили для вас оптимальный маршрут по зонам фестиваля.</p>
                     </div>
-                    <div class="buttons col-12 d-flex justify-content-between align-items-center">
-                        <button class="btn btn-lg btn-primary end" data-question="22">Завершить</button>
+                    <div class="buttons col-12 d-flex justify-content-center">
+                        <button class="btn btn-lg btn-primary end" data-question="22">Перейти к результатам</button>
                     </div>
                 </div>
             </div>
@@ -948,40 +952,45 @@
             <div class="container">
                 <div class="test__block-content row">
                     <div class="text col-12">
-                        <p class="text-center">Ваш результат:</p>
-                        <p class="text-center">
-                            <span id="correct-answers">0</span> / 15
+                        <p class="text-center">Ваш результат:
+                            <span class="text-center font-weight-bold results__result" id="result-text-wrap">
+                                <span id="correct-answers">0</span> / 15
+                            </span>
                         </p>
-                        <p class="results__text" id="text-end">
-                            Упс. Ваши финансовые знания ниже среднего. Но учиться никогда не поздно! Предлагаем вам следующий маршрут по площадке Семейного финансового фестиваля!
-                        </p>
-                    </div>
-                    <div class="text col-12">
-                        Поделиться результатом:
-                    </div>
 
-                    <div class="results__socials mb-3">
-                        <div class="d-flex flex-row ">
-                            <a class="btn btn-link" href="javascript:void(0)" title="ВКонтакте">
-                                <i class="mdi mdi-24px mdi-vk" aria-hidden="true"></i>
-                            </a>
-                            <a class="btn btn-link" href="javascript:void(0)" title="Одноклассники">
-                                <i class="mdi mdi-24px mdi-odnoklassniki" aria-hidden="true"></i>
-                            </a>
-                            <a class="btn btn-link" href="javascript:void(0)" title="Facebook">
-                                <i class="mdi mdi-24px mdi-facebook" aria-hidden="true"></i>
-                            </a>
-                            <a class="btn btn-link" href="javascript:void(0)" title="Instagram">
-                                <i class="mdi mdi-24px mdi-instagram" aria-hidden="true"></i>
-                            </a>
-                            <a class="btn btn-link" href="javascript:void(0)" title="Twitter">
-                                <i class="mdi mdi-24px mdi-twitter" aria-hidden="true"></i>
-                            </a>
+                        <p class="results__text" id="text-end">
+                            Lorem ipsum dolor sit amet.
+                        </p>
+                    </div>
+                    <div class="text col-12 d-flex align-content-center justify-content-between">
+                        <div class="results__socials">
+                            Поделиться результатом:
+                        </div>
+                        <div class="results__socials">
+                            <div class="d-flex flex-row ">
+                                <a class="btn btn-link btn-link--custom" href="javascript:void(0)" title="ВКонтакте">
+                                    <i class="mdi mdi-24px mdi-vk" aria-hidden="true"></i>
+                                </a>
+                                <a class="btn btn-link btn-link--custom" href="javascript:void(0)"
+                                   title="Одноклассники">
+                                    <i class="mdi mdi-24px mdi-odnoklassniki" aria-hidden="true"></i>
+                                </a>
+                                <a class="btn btn-link btn-link--custom" href="javascript:void(0)" title="Facebook">
+                                    <i class="mdi mdi-24px mdi-facebook" aria-hidden="true"></i>
+                                </a>
+                                <a class="btn btn-link btn-link--custom" href="javascript:void(0)" title="Instagram">
+                                    <i class="mdi mdi-24px mdi-instagram" aria-hidden="true"></i>
+                                </a>
+                                <a class="btn btn-link btn-link--custom" href="javascript:void(0)" title="Twitter">
+                                    <i class="mdi mdi-24px mdi-twitter" aria-hidden="true"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
 
+
                     <!--<div class="buttons col-12 d-flex justify-content-between align-items-center">-->
-                        <!--<button class="btn btn-lg btn-primary restart" data-question="1">Пройти тест заново</button>-->
+                    <!--<button class="btn btn-lg btn-primary restart" data-question="1">Пройти тест заново</button>-->
                     <!--</div>-->
                 </div>
             </div>
