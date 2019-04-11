@@ -15,14 +15,19 @@
 </head>
 <body>
 
-<noscript>Для работы приложения необходимо включить поддержку Javascript!</noscript>
+
+<noscript>
+    <div class="noscipt">
+        <div class="noscipt__content col-6">Для работы приложения, пожалуйста, включите поддержку Javascript и перезагрузите страницу.</div>
+    </div>
+</noscript>
 
 <main>
     <div class="test col-12">
         <div class="col-12 col-sm-8 col-xl-6 mx-auto test__block animated fadeIn ">
             <div class="container">
-                <div class="test__block-content">
-                    <div class="text">
+                <div class="test__block-content row">
+                    <div class="text col-12">
                         На фестивале больше 20 игровых и образовательных зон, активности в которых происходят
                         одновременно. Чтобы не пропустить ничего интересного и важного, вы можете заранее составить
                         оптимальный для себя маршрут движения по зонам фестиваля. Для этого ответьте, пожалуйста, на
@@ -36,20 +41,20 @@
         </div>
         <div class="col-12 col-sm-8 col-xl-6 mx-auto test__block animated fadeIn disabled">
             <div class="container">
-                <div class="test__block-content">
-                    <div class="text">
+                <div class="test__block-content row">
+                    <div class="text col-12">
                         <div class="text__question">
                             1. Вы придёте на фестиваль с детьми?
                         </div>
                         <div class="text__answers">
                             <ul class="list-group">
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="1" value="1">
                                         <span>Да</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="1" value="2">
                                         <span>Нет</span>
@@ -58,7 +63,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="buttons d-flex justify-content-between align-items-center">
+                    <div class="buttons col-12 d-flex justify-content-between align-items-center">
                         <button class="btn btn-lg btn-primary prev" data-question="0">Назад</button>
                         <button class="btn btn-lg btn-primary next" data-question="2" disabled>Далее</button>
                     </div>
@@ -67,27 +72,27 @@
         </div>
         <div class="col-12 col-sm-8 col-xl-6 mx-auto test__block animated fadeIn disabled">
             <div class="container">
-                <div class="test__block-content">
-                    <div class="text">
+                <div class="test__block-content row">
+                    <div class="text col-12">
                         <div class="text__question">
                             2. Вы хотите, чтобы на фестивале ваши дети всегда были вместе с вами, или, наоборот, чтобы
                             каждый «шёл своей дорогой»?
                         </div>
                         <div class="text__answers">
                             <ul class="list-group">
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="2" value="1">
                                         <span>хочу быть вместе с детьми</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="2" value="2">
                                         <span>пусть дети займутся своими делами, а взрослые – своими</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="2" value="3">
                                         <span>не могу выбрать, пусть будет и так, и так</span>
@@ -96,7 +101,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="buttons">
+                    <div class="buttons col-12 d-flex justify-content-between align-items-center">
                         <button class="btn btn-lg btn-primary prev" data-question="1">Назад</button>
                         <button class="btn btn-lg btn-primary next" data-question="3" disabled>Далее</button>
                     </div>
@@ -105,33 +110,33 @@
         </div>
         <div class="col-12 col-sm-8 col-xl-6 mx-auto test__block animated fadeIn disabled">
             <div class="container">
-                <div class="test__block-content">
-                    <div class="text">
+                <div class="test__block-content row">
+                    <div class="text col-12">
                         <div class="text__question">
                             3. Что, как вы думаете, ваши дети должны получить от фестиваля прежде всего? (выберите не
                             более двух ответов)
                         </div>
                         <div class="text__answers">
                             <ul class="list-group">
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="checkbox" name="3" value="1">
                                         <span>получить полезные финансовые лайфхаки</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="checkbox" name="3" value="2">
                                         <span>поиграть со сверстниками в финансовые игры</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="checkbox" name="3" value="3">
                                         <span>развить навыки переговоров, обмена и торговли</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="checkbox" name="3" value="4">
                                         <span>проявить себя в интеллектуальных играх и квестах</span>
@@ -140,7 +145,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="buttons">
+                    <div class="buttons col-12 d-flex justify-content-between align-items-center">
                         <button class="btn btn-lg btn-primary prev" data-question="2">Назад</button>
                         <button class="btn btn-lg btn-primary next" data-question="4" disabled>Далее</button>
                     </div>
@@ -149,26 +154,26 @@
         </div>
         <div class="col-12 col-sm-8 col-xl-6 mx-auto test__block animated fadeIn disabled">
             <div class="container">
-                <div class="test__block-content">
-                    <div class="text">
+                <div class="test__block-content row">
+                    <div class="text col-12">
                         <div class="text__question">
                             4. Чем вы сами прежде всего хотите заняться на фестивале? (выберите не более двух ответов)
                         </div>
                         <div class="text__answers">
                             <ul class="list-group">
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="checkbox" name="4" value="1">
                                         <span>послушать советы специалистов на финансовые темы</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="checkbox" name="4" value="2">
                                         <span>лично поговорить с экспертами, получить консультации</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="checkbox" name="4" value="3">
                                         <span>принять участие в командных играх и викторинах</span>
@@ -177,7 +182,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="buttons">
+                    <div class="buttons col-12 d-flex justify-content-between align-items-center">
                         <button class="btn btn-lg btn-primary prev" data-question="3">Назад</button>
                         <button class="btn btn-lg btn-primary next" data-question="5" disabled>Далее</button>
                     </div>
@@ -186,33 +191,33 @@
         </div>
         <div class="col-12 col-sm-8 col-xl-6 mx-auto test__block animated fadeIn disabled">
             <div class="container">
-                <div class="test__block-content">
-                    <div class="text">
+                <div class="test__block-content row">
+                    <div class="text col-12">
                         <div class="text__question">
                             5. Какие вопросы из сферы личных финансов вас интересуют в первую очередь? (выберите не
                             более двух ответов)
                         </div>
                         <div class="text__answers">
                             <ul class="list-group">
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="checkbox" name="5" value="1">
                                         <span>как увеличить доходы и оптимизировать расходы</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="checkbox" name="5" value="2">
                                         <span>финансовое планирование и семейный бюджет</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="checkbox" name="5" value="3">
                                         <span>финансовая безопасность и способы защиты от мошенников</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="checkbox" name="5" value="4">
                                         <span>банковские карты и их применение</span>
@@ -221,7 +226,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="buttons">
+                    <div class="buttons col-12 d-flex justify-content-between align-items-center">
                         <button class="btn btn-lg btn-primary prev" data-question="4">Назад</button>
                         <button class="btn btn-lg btn-primary next" data-question="6" disabled>Далее</button>
                     </div>
@@ -231,44 +236,44 @@
 
         <div class="col-12 col-sm-8 col-xl-6 mx-auto test__block animated fadeIn disabled">
             <div class="container">
-                <div class="test__block-content">
-                    <div class="text">
+                <div class="test__block-content row">
+                    <div class="text col-12">
                         <div class="text__question">
                             6. Из чего складывается текущий доход семьи?
                         </div>
                         <div class="text__answers">
                             <ul class="list-group">
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="checkbox" name="6" value="1" data-correct="true">
                                         <span>заработная плата членов семьи по основному месту работы</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="checkbox" name="6" value="2">
                                         <span>средства, вложенные в недвижимость</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="checkbox" name="6" value="3" data-correct="true">
                                         <span>проценты по депозитам</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="checkbox" name="6" value="4">
                                         <span>возможные страховые выплаты</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="checkbox" name="6" value="5" data-correct="true">
                                         <span>приработок</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="checkbox" name="6" value="6">
                                         <span>затрудняюсь ответить</span>
@@ -277,7 +282,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="buttons">
+                    <div class="buttons col-12 d-flex justify-content-between align-items-center">
                         <button class="btn btn-lg btn-primary prev" data-question="5">Назад</button>
                         <button class="btn btn-lg btn-primary next" data-question="7" disabled>Далее</button>
                     </div>
@@ -286,44 +291,44 @@
         </div>
         <div class="col-12 col-sm-8 col-xl-6 mx-auto test__block animated fadeIn disabled">
             <div class="container">
-                <div class="test__block-content">
-                    <div class="text">
+                <div class="test__block-content row">
+                    <div class="text col-12">
                         <div class="text__question">
                             7. Ставка налога на заработную плату налоговых резидентов РФ сейчас составляет:
                         </div>
                         <div class="text__answers">
                             <ul class="list-group">
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="7" value="1">
                                         <span>14%</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="7" value="2">
                                         <span>30%</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="7" value="3" data-correct="true">
                                         <span>13%</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="7" value="4">
                                         <span>32%</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="7" value="5">
                                         <span>10%</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="7" value="6">
                                         <span>затрудняюсь ответить</span>
@@ -332,7 +337,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="buttons">
+                    <div class="buttons col-12 d-flex justify-content-between align-items-center">
                         <button class="btn btn-lg btn-primary prev" data-question="6">Назад</button>
                         <button class="btn btn-lg btn-primary next" data-question="8" disabled>Далее</button>
                     </div>
@@ -341,32 +346,32 @@
         </div>
         <div class="col-12 col-sm-8 col-xl-6 mx-auto test__block animated fadeIn disabled">
             <div class="container">
-                <div class="test__block-content">
-                    <div class="text">
+                <div class="test__block-content row">
+                    <div class="text col-12">
                         <div class="text__question">
-                            8. Что такое семейный бюджет? (выберите один, несколько вариантов ответов)
+                            8. Что такое семейный бюджет? (выберите один или несколько вариантов ответов)
                         </div>
                         <div class="text__answers">
                             <ul class="list-group">
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="checkbox" name="8" value="1" data-correct="true">
                                         <span>все денежные средства, которые семья может тратить на любые нужды</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="checkbox" name="8" value="2" data-correct="true">
                                         <span>подробный план доходов и расходов семьи</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="checkbox" name="8" value="3" data-correct="true">
                                         <span>деньги, которые остаются в семье после оплаты коммунальных услуг, кредитов, ипотеки и других обязательных расходов</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="checkbox" name="8" value="4">
                                         <span>затрудняюсь ответить</span>
@@ -375,7 +380,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="buttons">
+                    <div class="buttons col-12 d-flex justify-content-between align-items-center">
                         <button class="btn btn-lg btn-primary prev" data-question="7">Назад</button>
                         <button class="btn btn-lg btn-primary next" data-question="9" disabled>Далее</button>
                     </div>
@@ -384,32 +389,32 @@
         </div>
         <div class="col-12 col-sm-8 col-xl-6 mx-auto test__block animated fadeIn disabled">
             <div class="container">
-                <div class="test__block-content">
-                    <div class="text">
+                <div class="test__block-content row">
+                    <div class="text col-12">
                         <div class="text__question">
                             9. Для чего нужен семейный бюджет? (выберите несколько вариантов ответов)
                         </div>
                         <div class="text__answers">
                             <ul class="list-group">
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="checkbox" name="9" value="1" data-correct="true">
                                         <span>чтобы определить финансовые цели семьи</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="checkbox" name="9" value="2" data-correct="true">
                                         <span>чтобы отказаться от спонтанных и необязательных покупок</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="checkbox" name="9" value="3" data-correct="true">
                                         <span>чтобы создать финансовый резерв на случай финансового кризиса в семье</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="checkbox" name="9" value="4">
                                         <span>затрудняюсь ответить</span>
@@ -418,7 +423,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="buttons">
+                    <div class="buttons col-12 d-flex justify-content-between align-items-center">
                         <button class="btn btn-lg btn-primary prev" data-question="8">Назад</button>
                         <button class="btn btn-lg btn-primary next" data-question="10" disabled>Далее</button>
                     </div>
@@ -428,38 +433,38 @@
 
         <div class="col-12 col-sm-8 col-xl-6 mx-auto test__block animated fadeIn disabled">
             <div class="container">
-                <div class="test__block-content">
-                    <div class="text">
+                <div class="test__block-content row">
+                    <div class="text col-12">
                         <div class="text__question">
                             10. Какой капитал обеспечивает финансовую защиту благосостояния семьи?
                         </div>
                         <div class="text__answers">
                             <ul class="list-group">
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="10" value="1">
                                         <span>текущий</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="10" value="2" data-correct="true">
                                         <span>резервный</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="10" value="3">
                                         <span>инвестиционный</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="10" value="4">
                                         <span>все ответы верны</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="10" value="5">
                                         <span>затрудняюсь ответить</span>
@@ -468,7 +473,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="buttons">
+                    <div class="buttons col-12 d-flex justify-content-between align-items-center">
                         <button class="btn btn-lg btn-primary prev" data-question="9">Назад</button>
                         <button class="btn btn-lg btn-primary next" data-question="11" disabled>Далее</button>
                     </div>
@@ -477,42 +482,41 @@
         </div>
         <div class="col-12 col-sm-8 col-xl-6 mx-auto test__block animated fadeIn disabled">
             <div class="container">
-                <div class="test__block-content">
-                    <div class="text">
+                <div class="test__block-content row">
+                    <div class="text col-12">
                         <div class="text__question">
                             11. Каким бывает банковский вклад?
                         </div>
                         <div class="text__answers">
                             <ul class="list-group">
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="11" value="1" data-correct="true">
                                         <span>до востребования</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="11" value="2">
                                         <span>вечный</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="11" value="3">
                                         <span>несрочный</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="11" value="4">
                                         <span>затрудняюсь ответить</span>
                                     </label>
-                                </li
-
+                                </li>
                             </ul>
                         </div>
                     </div>
-                    <div class="buttons">
+                    <div class="buttons col-12 d-flex justify-content-between align-items-center">
                         <button class="btn btn-lg btn-primary prev" data-question="10">Назад</button>
                         <button class="btn btn-lg btn-primary next" data-question="12" disabled>Далее</button>
                     </div>
@@ -521,32 +525,32 @@
         </div>
         <div class="col-12 col-sm-8 col-xl-6 mx-auto test__block animated fadeIn disabled">
             <div class="container">
-                <div class="test__block-content">
-                    <div class="text">
+                <div class="test__block-content row">
+                    <div class="text col-12">
                         <div class="text__question">
                             12. Что такое льготный период кредитования?
                         </div>
                         <div class="text__answers">
                             <ul class="list-group">
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="12" value="1" data-correct="true">
                                         <span>срок, в течение которого за пользование заемными деньгами не берутся проценты</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="12" value="2">
                                         <span>три дня в месяц, когда наличные по кредитной карте можно снимать без комиссии</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="12" value="3">
                                         <span>три дня в месяц, когда наличные по кредитной карте можно снимать без комиссии</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="12" value="4">
                                         <span>затрудняюсь ответить</span>
@@ -556,7 +560,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="buttons">
+                    <div class="buttons col-12 d-flex justify-content-between align-items-center">
                         <button class="btn btn-lg btn-primary prev" data-question="11">Назад</button>
                         <button class="btn btn-lg btn-primary next" data-question="13" disabled>Далее</button>
                     </div>
@@ -565,32 +569,32 @@
         </div>
         <div class="col-12 col-sm-8 col-xl-6 mx-auto test__block animated fadeIn disabled">
             <div class="container">
-                <div class="test__block-content">
-                    <div class="text">
+                <div class="test__block-content row">
+                    <div class="text col-12">
                         <div class="text__question">
                             13. Самая высокая плата за пользование средствами с кредитной карты взимается: (выберите все верные варианты ответа)
                         </div>
                         <div class="text__answers">
                             <ul class="list-group">
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="checkbox" name="13" value="1">
                                         <span>при оплате кредитной картой товаров в интернет-магазине</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="checkbox" name="13" value="2" data-correct="true">
                                         <span>при снятии наличных с кредитной карты</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="checkbox" name="13" value="3" data-correct="true">
                                         <span>при переводе средств с кредитной карты на чужую дебетовую карту</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="checkbox" name="13" value="4">
                                         <span>затрудняюсь ответить</span>
@@ -599,7 +603,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="buttons">
+                    <div class="buttons col-12 d-flex justify-content-between align-items-center">
                         <button class="btn btn-lg btn-primary prev" data-question="12">Назад</button>
                         <button class="btn btn-lg btn-primary next" data-question="14" disabled>Далее</button>
                     </div>
@@ -608,32 +612,32 @@
         </div>
         <div class="col-12 col-sm-8 col-xl-6 mx-auto test__block animated fadeIn disabled">
             <div class="container">
-                <div class="test__block-content">
-                    <div class="text">
+                <div class="test__block-content row">
+                    <div class="text col-12">
                         <div class="text__question">
                             14. На фондовом рынке:
                         </div>
                         <div class="text__answers">
                             <ul class="list-group">
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="14" value="1">
                                         <span>продаются и покупаются строительные материалы</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="14" value="2">
                                         <span>продаются и покупаются оптовые партии продовольствия</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="14" value="3" data-correct="true">
                                         <span>продаются и покупаются ценные бумаги</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="14" value="4">
                                         <span>затрудняюсь ответить</span>
@@ -643,7 +647,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="buttons">
+                    <div class="buttons col-12 d-flex justify-content-between align-items-center">
                         <button class="btn btn-lg btn-primary prev" data-question="13">Назад</button>
                         <button class="btn btn-lg btn-primary next" data-question="15" disabled>Далее</button>
                     </div>
@@ -652,32 +656,32 @@
         </div>
         <div class="col-12 col-sm-8 col-xl-6 mx-auto test__block animated fadeIn disabled">
             <div class="container">
-                <div class="test__block-content">
-                    <div class="text">
+                <div class="test__block-content row">
+                    <div class="text col-12">
                         <div class="text__question">
                             15. Что такое инвестиция?
                         </div>
                         <div class="text__answers">
                             <ul class="list-group">
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="15" value="1">
                                         <span>долгосрочное вложение капитала с целью получения прибыли</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="15" value="2" data-correct="true">
                                         <span>вложение свободных денег в надежные и минимально рискованные источники дохода</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="15" value="2">
                                         <span>вложение свободных денег в надежные и минимально рискованные источники дохода</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="15" value="2">
                                         <span>затрудняюсь ответить</span>
@@ -687,7 +691,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="buttons">
+                    <div class="buttons col-12 d-flex justify-content-between align-items-center">
                         <button class="btn btn-lg btn-primary prev" data-question="14">Назад</button>
                         <button class="btn btn-lg btn-primary next" data-question="16" disabled>Далее</button>
                     </div>
@@ -696,32 +700,32 @@
         </div>
         <div class="col-12 col-sm-8 col-xl-6 mx-auto test__block animated fadeIn disabled">
             <div class="container">
-                <div class="test__block-content">
-                    <div class="text">
+                <div class="test__block-content row">
+                    <div class="text col-12">
                         <div class="text__question">
                             16. Выплата по страховке производится в случае
                         </div>
                         <div class="text__answers">
                             <ul class="list-group">
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="16" value="1">
                                         <span>морального вреда</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="16" value="2" data-correct="true">
                                         <span>материального ущерба</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="16" value="3">
                                         <span>все ответы верные</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="16" value="4">
                                         <span>затрудняюсь ответить</span>
@@ -730,7 +734,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="buttons">
+                    <div class="buttons col-12 d-flex justify-content-between align-items-center">
                         <button class="btn btn-lg btn-primary prev" data-question="15">Назад</button>
                         <button class="btn btn-lg btn-primary next" data-question="17" disabled>Далее</button>
                     </div>
@@ -739,32 +743,32 @@
         </div>
         <div class="col-12 col-sm-8 col-xl-6 mx-auto test__block animated fadeIn disabled">
             <div class="container">
-                <div class="test__block-content">
-                    <div class="text">
+                <div class="test__block-content row">
+                    <div class="text col-12">
                         <div class="text__question">
                             17. С каким из утверждений вы согласны в наибольшей степени
                         </div>
                         <div class="text__answers">
                             <ul class="list-group">
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="17" value="1" data-correct="true">
                                         <span>страхование от несчастных случаев и болезни необходимо, т.к.  помогает преодолеть неприятные последствия</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="17" value="2">
                                         <span>лучше не страховаться от несчастных случаев, поскольку подобное страхование может навлечь беду («Не буди лихо, пока оно тихо»)</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="17" value="3">
                                         <span>страхование от несчастных случаев бесполезно, т.к. в случае их наступления от страховой компании трудно добиться выплаты страховой суммы</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="17" value="4">
                                         <span>затрудняюсь ответить</span>
@@ -774,7 +778,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="buttons">
+                    <div class="buttons col-12 d-flex justify-content-between align-items-center">
                         <button class="btn btn-lg btn-primary prev" data-question="16">Назад</button>
                         <button class="btn btn-lg btn-primary next" data-question="18" disabled>Далее</button>
                     </div>
@@ -783,32 +787,32 @@
         </div>
         <div class="col-12 col-sm-8 col-xl-6 mx-auto test__block animated fadeIn disabled">
             <div class="container">
-                <div class="test__block-content">
-                    <div class="text">
+                <div class="test__block-content row">
+                    <div class="text col-12">
                         <div class="text__question">
                             18. С какими из следующих утверждений вы согласны?
                         </div>
                         <div class="text__answers">
                             <ul class="list-group">
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="checkbox" name="18" value="1">
                                         <span>пин-код карты можно назвать сотруднику банка только при личной встрече</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="checkbox" name="18" value="2">
                                         <span>данные банковской карты можно вносить на интернет-ресурсах без защищенного соединения (https), при проведении платежа на официальных сайтах государственных структур (например, на сайте «Госулуги», сайта налоговой службы и т.п.)</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="checkbox" name="18" value="3" data-correct="true">
                                         <span>не согласен ни с одним утверждением</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="checkbox" name="18" value="4">
                                         <span>затрудняюсь ответить</span>
@@ -818,7 +822,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="buttons">
+                    <div class="buttons col-12 d-flex justify-content-between align-items-center">
                         <button class="btn btn-lg btn-primary prev" data-question="17">Назад</button>
                         <button class="btn btn-lg btn-primary next" data-question="19" disabled>Далее</button>
                     </div>
@@ -827,38 +831,38 @@
         </div>
         <div class="col-12 col-sm-8 col-xl-6 mx-auto test__block animated fadeIn disabled">
             <div class="container">
-                <div class="test__block-content">
-                    <div class="text">
+                <div class="test__block-content row">
+                    <div class="text col-12">
                         <div class="text__question">
                             19. Что такое финансовая «подушка безопасности»?
                         </div>
                         <div class="text__answers">
                             <ul class="list-group">
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="19" value="1" data-correct="true">
                                         <span>деньги, отложенные на «черный день»</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="19" value="2">
                                         <span>деньги, переданные на время родственникам под обязательство вернуть их по вашему первому требованию</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="19" value="3">
                                         <span>деньги родственников, на которые вы можете рассчитывать в кризисные моменты</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="19" value="4">
                                         <span>деньги, вложенные в недвижимость</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="radio" name="19" value="5">
                                         <span>затрудняюсь ответить</span>
@@ -868,7 +872,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="buttons">
+                    <div class="buttons col-12 d-flex justify-content-between align-items-center">
                         <button class="btn btn-lg btn-primary prev" data-question="18">Назад</button>
                         <button class="btn btn-lg btn-primary next" data-question="20" disabled>Далее</button>
                     </div>
@@ -877,39 +881,39 @@
         </div>
         <div class="col-12 col-sm-8 col-xl-6 mx-auto test__block animated fadeIn disabled">
             <div class="container">
-                <div class="test__block-content">
-                    <div class="text">
+                <div class="test__block-content row">
+                    <div class="text col-12">
                         <div class="text__question">
                             20. Куда вы обратитесь с жалобой (претензией) для защиты своих прав как потребителя
                             финансовых услуг?
                         </div>
                         <div class="text__answers">
                             <ul class="list-group">
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="checkbox" name="20" value="1" data-correct="true">
                                         <span>в Роспотребнадзор</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="checkbox" name="20" value="2" data-correct="true">
                                         <span>в Общество защиты прав потребителей</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="checkbox" name="20" value="3" data-correct="true">
                                         <span>в Центральный банк РФ</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="checkbox" name="20" value="4">
                                         <span>к руководству организации, нарушившей ваши права</span>
                                     </label>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item custom">
                                     <label>
                                         <input type="checkbox" name="20" value="5">
                                         <span>затрудняюсь ответить</span>
@@ -919,7 +923,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="buttons">
+                    <div class="buttons col-12 d-flex justify-content-between align-items-center">
                         <button class="btn btn-lg btn-primary prev" data-question="19">Назад</button>
                         <button class="btn btn-lg btn-primary next" data-question="21" disabled>Далее</button>
                     </div>
@@ -927,15 +931,14 @@
             </div>
         </div>
 
-
         <div class="col-12 col-sm-8 col-xl-6 mx-auto test__block animated fadeIn disabled">
             <div class="container">
-                <div class="test__block-content">
-                    <div class="text">
+                <div class="test__block-content row">
+                    <div class="text col-12">
                         Спасибо за прохождение нашего теста! Нажмите на кнопку "Завершить", чтобы узнать результаты.
                     </div>
-                    <div class="buttons">
-                        <button class="btn btn-lg btn-primary end" data-question="21">Завершить</button>
+                    <div class="buttons col-12 d-flex justify-content-between align-items-center">
+                        <button class="btn btn-lg btn-primary end" data-question="22">Завершить</button>
                     </div>
                 </div>
             </div>
@@ -943,17 +946,17 @@
 
         <div class="col-12 col-sm-8 col-xl-6 mx-auto test__block results animated fadeIn disabled">
             <div class="container">
-                <div class="test__block-content">
-                    <div class="text">
+                <div class="test__block-content row">
+                    <div class="text col-12">
                         <p class="text-center">Ваш результат:</p>
                         <p class="text-center">
-                            <span id="correct-answers">10</span> / 15
+                            <span id="correct-answers">0</span> / 15
                         </p>
-                        <p class="results__text">
+                        <p class="results__text" id="text-end">
                             Упс. Ваши финансовые знания ниже среднего. Но учиться никогда не поздно! Предлагаем вам следующий маршрут по площадке Семейного финансового фестиваля!
                         </p>
                     </div>
-                    <div class="text">
+                    <div class="text col-12">
                         Поделиться результатом:
                     </div>
 
@@ -975,13 +978,11 @@
                                 <i class="mdi mdi-24px mdi-twitter" aria-hidden="true"></i>
                             </a>
                         </div>
-
-
                     </div>
 
-                    <div class="buttons">
-                        <button class="btn btn-lg btn-primary restart" data-question="1">Пройти тест заново</button>
-                    </div>
+                    <!--<div class="buttons col-12 d-flex justify-content-between align-items-center">-->
+                        <!--<button class="btn btn-lg btn-primary restart" data-question="1">Пройти тест заново</button>-->
+                    <!--</div>-->
                 </div>
             </div>
         </div>

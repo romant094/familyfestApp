@@ -16,6 +16,24 @@ h1 {
   display: none;
 }
 
+.noscipt {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.list-group-item.custom {
+  border: none;
+  padding: 0;
+}
+
 main {
   width: 100vw;
   height: 100vh;
@@ -36,6 +54,9 @@ main .test__block-content {
 }
 main .test__block-content .text {
   font-size: 1.5rem;
+}
+main .test__block-content .text__questions, main .test__block-content .text__answers {
+  margin-bottom: 1rem;
 }
 main .results__text {
   font-size: 18px;
