@@ -1,6 +1,7 @@
 let currentQuestion = 0,
     correctAnswers = 0,
-    answers = [];
+    answers = [],
+    routeNumber;
 
 const questionsCount = 20,
     d = document,
@@ -12,6 +13,7 @@ const questionsCount = 20,
     // buttonRestart = d.querySelector('button.restart'),
     buttonsPrev = d.querySelectorAll('button.prev, button.next'),
     buttonsNext = d.querySelectorAll('button.next'),
+    routeLinks = d.querySelectorAll('.route-link'),
     currentQuestionBlock = d.querySelector('#current-question'),
     resultCorrectAnswers = d.querySelector('#correct-answers'),
     resultFinalText = d.querySelector('#text-end'),
@@ -36,6 +38,27 @@ const questionsCount = 20,
                 children: 'Клуб «60 секунд», Игровая площадка, Сквер, Беседка, Библиотека, Школа.',
                 grownUps: 'Университет, Офис консультантов, Городская площадь, Сквер, Выставка плакатов.'
             }
+        }
+    ],
+    routes = [
+        {
+            id: 1,
+            locations: [
+                'Университет, Офис консультантов, Городская площадь, Финансовый центр, Сквер, Выставка плакатов.'
+            ]
+        },
+        {
+            id: 2,
+            locations: [
+                'Клуб «60 секунд», Игровая площадка, Сквер, Беседка, Школа, Финансовый центр, Университет.'
+            ]
+        },
+        {
+            id: 3,
+            locations: [
+                'Клуб «60 секунд», Игровая площадка, Сквер, Беседка, Библиотека, Школа.',
+                'Университет, Офис консультантов, Городская площадь, Сквер, Выставка плакатов.'
+            ]
         }
     ];
 
@@ -205,26 +228,69 @@ const renderResults = () => {
     }
     resultCorrectAnswers.textContent = correctAnswers;
     resultFinalText.textContent = resultText;
+
+    const firstAnswer = answers[0].answers[0],
+        secondAnswer = answers[1].answers[0];
+
+    if (firstAnswer.value === '2') {
+        renderRoutes(routeLinks[0], 1);
+    }
+    if (firstAnswer.value === '1' && secondAnswer.value === '1') {
+        renderRoutes(routeLinks[0], 2);
+    }
+    if (firstAnswer.value === '1' && secondAnswer.value === '2') {
+        renderRoutes(routeLinks[0], 3);
+    }
+    if (firstAnswer.value === '1' && secondAnswer.value === '3') {
+        renderRoutes(routeLinks[0], 2);
+        renderRoutes(routeLinks[1], 3);
+    }
 };
 
-const chooseRoute = () => {
-    let routeNumber = 1;
-    const firstAnswer = answers[0].answers[0].value,
-        secondAnswer = answers[1].answers[0].value;
-    if (firstAnswer === '1' && secondAnswer === '1') {
-        routeNumber = 2;
+const renderRoutes = (routeLink, routeNum) => {
+    routeLink.setAttribute('href', 'route' + routeNum);
+    if (routeLink.querySelector('span')){
+        routeLink.querySelector('span').textContent = routeNum;
     }
-    if (firstAnswer === '1' && secondAnswer === '2') {
-        routeNumber = 3;
-    }
-    if (firstAnswer === '1' && secondAnswer === '3') {
-        routeNumber = 4;
+    console.log(routeLink);
+    if (routeLink === routeLinks[1]){
+        routeLink.classList.remove('disabled');
     }
 };
 
-const renderRoutes = () => {
-
+const shareOkFunction = ()=>{
+    fetch('https://connect.ok.ru/oauth/authorize\n' +
+        '\n' +
+        '?client_id=1277911296\n' +
+        '\n' +
+        '&scope=VALUABLE_ACCESS;LONG_ACCESS_TOKEN\n' +
+        '\n' +
+        '&response_type=token\n' +
+        '\n' +
+        '&redirect_uri=https://apiok.ru/oauth_callback')
+        .then(()=>{
+            fetch('https://api.ok.ru/fb.do\n' +
+                '\n' +
+                '?application_key=CBACGMCNEBABABABA\n' +
+                '\n' +
+                '&format=json\n' +
+                '\n' +
+                '&method=share.fetchLinkV2\n' +
+                '\n' +
+                '&url=https%3A%2F%2Fasque.me\n' +
+                '\n' +
+                '&sig=a6e5bd7a88e76113f422ed0473250c5d\n' +
+                '\n' +
+                '&access_token=-s-9.gfKHPeka5JGIw7By8gDtL7eYCnIKSfEaiFINMah07FIKthhW7mMMtcd4-irRL9f.hEJuwffz7HKMSceZghI-y1');
+        })
+        .catch(res=>console.log(res));
 };
+
+const shareOkBtn = d.querySelector('#ok-share');
+
+shareOkBtn.addEventListener('click', ()=>{
+    shareOkFunction();
+});
 
 //TODO remove devFunc
 const devFunc = () => {
@@ -249,4 +315,4 @@ const devFunc = () => {
         })
     })
 };
-devFunc();
+// devFunc();
