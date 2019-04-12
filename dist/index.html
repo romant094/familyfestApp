@@ -19,7 +19,8 @@
     <meta property="og:type" content="website"/>
     <meta property="og:title" content="FFA - FamilyFestApp"/>
     <meta property="og:description" content="This is the first family fest app"/>
-    <meta property="og:image" content="https://static.tildacdn.com/tild6237-3430-4661-b462-613961376433/bg_image_1.png"/>
+    <meta property="og:image"
+          content="https://static.tildacdn.com/tild6237-3430-4661-b462-613961376433/bg_image_1.png"/>
 
     <title>FFA - FamilyFestApp</title>
 </head>
@@ -982,24 +983,9 @@
                             Поделиться результатом:
                         </div>
                         <div class="results__socials">
-                            <div class="d-flex flex-row ">
-                                <a class="btn btn-link btn-link--custom" href="javascript:void(0)" title="ВКонтакте">
-                                    <i class="mdi mdi-24px mdi-vk" aria-hidden="true"></i>
-                                </a>
-                                <a class="btn btn-link btn-link--custom" href="javascript:void(0)"
-                                   title="Одноклассники">
-                                    <i id="ok-share" class="mdi mdi-24px mdi-odnoklassniki" aria-hidden="true"></i>
-                                </a>
-                                <a class="btn btn-link btn-link--custom" href="javascript:void(0)" title="Facebook">
-                                    <i class="mdi mdi-24px mdi-facebook" aria-hidden="true"></i>
-                                </a>
-                                <!--<a class="btn btn-link btn-link&#45;&#45;custom" href="javascript:void(0)" title="Instagram">-->
-                                <!--<i class="mdi mdi-24px mdi-instagram" aria-hidden="true"></i>-->
-                                <!--</a>-->
-                                <a class="btn btn-link btn-link--custom" href="javascript:void(0)" title="Twitter">
-                                    <i class="mdi mdi-24px mdi-twitter" aria-hidden="true"></i>
-                                </a>
-                            </div>
+                            <script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+                            <script src="//yastatic.net/share2/share.js"></script>
+                            <div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,twitter"></div>
                         </div>
                     </div>
 
@@ -1012,9 +998,9 @@
         </div>
 
         <!--TODO remove dev item-->
-        <div class="d-flex all-questions">
+        <!--<div class="d-flex all-questions">
 
-        </div>
+        </div>-->
 
         <div class="col-12 col-sm-8 col-xl-6 mx-auto test__progress disabled">
             <div class="test__progress-current">
@@ -1030,5 +1016,6 @@
 
 <!--TODO Изменить на нормальный в конце-->
 <script src="js/obfuscated.js"></script>
+<!--<script src="js/script.js"></script>-->
 </body>
 </html>

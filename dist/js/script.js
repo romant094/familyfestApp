@@ -1,1 +1,292 @@
-var _0x2be8=['YnV0dG9uLm5leHQ=','LnJvdXRlLWxpbms=','I2N1cnJlbnQtcXVlc3Rpb24=','I2NvcnJlY3QtYW5zd2Vycw==','I3RleHQtZW5k','I3Jlc3VsdC10ZXh0LXdyYXA=','bGVuZ3Ro','0KPQv9GBLiDQktCw0YjQuCDRhNC40L3QsNC90YHQvtCy0YvQtSDQt9C90LDQvdC40Y8g0L3QuNC20LUg0YHRgNC10LTQvdC10LPQvi4g0J3QviDRg9GH0LjRgtGM0YHRjyDQvdC40LrQvtCz0LTQsCDQvdC1INC/0L7Qt9C00L3QviEg0J/RgNC10LTQu9Cw0LPQsNC10Lwg0LLQsNC8INGB0LvQtdC00YPRjtGJ0LjQuSDQvNCw0YDRiNGA0YPRgiDQv9C+INC/0LvQvtGJ0LDQtNC60LUg0KHQtdC80LXQudC90L7Qs9C+INGE0LjQvdCw0L3RgdC+0LLQvtCz0L4g0YTQtdGB0YLQuNCy0LDQu9GPIQ==','0KPQvdC40LLQtdGA0YHQuNGC0LXRgiwg0J7RhNC40YEg0LrQvtC90YHRg9C70YzRgtCw0L3RgtC+0LIsINCT0L7RgNC+0LTRgdC60LDRjyDQv9C70L7RidCw0LTRjCwg0KTQuNC90LDQvdGB0L7QstGL0Lkg0YbQtdC90YLRgCwg0KHQutCy0LXRgCwg0JLRi9GB0YLQsNCy0LrQsCDQv9C70LDQutCw0YLQvtCyLg==','0JrQu9GD0LEgwqs2MCDRgdC10LrRg9C90LTCuywg0JjQs9GA0L7QstCw0Y8g0L/Qu9C+0YnQsNC00LrQsCwg0KHQutCy0LXRgCwg0JHQtdGB0LXQtNC60LAsINCR0LjQsdC70LjQvtGC0LXQutCwLCDQqNC60L7Qu9CwLg==','0KPQvdC40LLQtdGA0YHQuNGC0LXRgiwg0J7RhNC40YEg0LrQvtC90YHRg9C70YzRgtCw0L3RgtC+0LIsINCT0L7RgNC+0LTRgdC60LDRjyDQv9C70L7RidCw0LTRjCwg0KHQutCy0LXRgCwg0JLRi9GB0YLQsNCy0LrQsCDQv9C70LDQutCw0YLQvtCyLg==','0JrQu9GD0LEgwqs2MCDRgdC10LrRg9C90LTCuywg0JjQs9GA0L7QstCw0Y8g0L/Qu9C+0YnQsNC00LrQsCwg0KHQutCy0LXRgCwg0JHQtdGB0LXQtNC60LAsINCo0LrQvtC70LAsINCk0LjQvdCw0L3RgdC+0LLRi9C5INGG0LXQvdGC0YAsINCj0L3QuNCy0LXRgNGB0LjRgtC10YIu','ZGlzYWJsZWQ=','c3R5bGU=','d2lkdGg=','YWRkRXZlbnRMaXN0ZW5lcg==','Y2xpY2s=','Zm9yRWFjaA==','ZGF0YXNldA==','Y2xhc3NMaXN0','cmVtb3Zl','YWRk','aW5wdXQ=','Y2hhbmdl','Z2V0QXR0cmlidXRl','YW5zd2Vycw==','dmFsdWU=','Y2hlY2tlZA==','Y29ycmVjdA==','cHVzaA==','bG9n','c2V0QXR0cmlidXRl','ZGF0YS1xdWVzdGlvbg==','aXNDaGVja2Vk','aXNDb3JyZWN0','cXVlc3Rpb24gbnVtYmVy','dGV4dC1kYW5nZXI=','Z29vZA==','dGV4dENvbnRlbnQ=','aHJlZg==','cm91dGU=','c3Bhbg==','aHR0cHM6Ly9jb25uZWN0Lm9rLnJ1L29hdXRoL2F1dGhvcml6ZQo=','P2NsaWVudF9pZD0xMjc3OTExMjk2Cg==','JnNjb3BlPVZBTFVBQkxFX0FDQ0VTUztMT05HX0FDQ0VTU19UT0tFTgo=','JnJlc3BvbnNlX3R5cGU9dG9rZW4K','JnJlZGlyZWN0X3VyaT1odHRwczovL2FwaW9rLnJ1L29hdXRoX2NhbGxiYWNr','P2FwcGxpY2F0aW9uX2tleT1DQkFDR01DTkVCQUJBQkFCQQo=','JmZvcm1hdD1qc29uCg==','Jm1ldGhvZD1zaGFyZS5mZXRjaExpbmtWMgo=','JnNpZz1hNmU1YmQ3YTg4ZTc2MTEzZjQyMmVkMDQ3MzI1MGM1ZAo=','JmFjY2Vzc190b2tlbj0tcy05LmdmS0hQZWthNUpHSXc3Qnk4Z0R0TDdlWUNuSUtTZkVhaUZJTk1haDA3RklLdGhoVzdtTU10Y2Q0LWlyUkw5Zi5oRUp1d2ZmejdIS01TY2VaZ2hJLXkx','Y2F0Y2g=','I29rLXNoYXJl','LmFsbC1xdWVzdGlvbnM=','Y3JlYXRlRWxlbWVudA==','cGFkZGluZw==','Y3Vyc29y','cG9pbnRlcg==','YXBwZW5kQ2hpbGQ=','LmFsbC1xdWVzdGlvbnMgc3Bhbg==','NDAw','cXVlc3Rpb24=','NzAw','cXVlcnlTZWxlY3Rvcg==','LnRlc3RfX3Byb2dyZXNz','I3Byb2dyZXNz','cXVlcnlTZWxlY3RvckFsbA==','LnRlc3RfX2Jsb2Nr','YnV0dG9uLnN0YXJ0','YnV0dG9uLmVuZA==','YnV0dG9uLnByZXYsIGJ1dHRvbi5uZXh0'];(function(_0x111632,_0x491609){var _0x6318c9=function(_0xff7629){while(--_0xff7629){_0x111632['push'](_0x111632['shift']());}};_0x6318c9(++_0x491609);}(_0x2be8,0x118));var _0x16b4=function(_0x17408d,_0x5a1f5d){_0x17408d=_0x17408d-0x0;var _0x5d3dfe=_0x2be8[_0x17408d];if(_0x16b4['bjJJhX']===undefined){(function(){var _0x3a9a12;try{var _0x518563=Function('return\x20(function()\x20'+'{}.constructor(\x22return\x20this\x22)(\x20)'+');');_0x3a9a12=_0x518563();}catch(_0x48cf14){_0x3a9a12=window;}var _0x2a77bc='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';_0x3a9a12['atob']||(_0x3a9a12['atob']=function(_0x55ed8d){var _0x1a37e6=String(_0x55ed8d)['replace'](/=+$/,'');for(var _0x5a14a6=0x0,_0x35ac58,_0x5801c9,_0x319d8c=0x0,_0x2f3428='';_0x5801c9=_0x1a37e6['charAt'](_0x319d8c++);~_0x5801c9&&(_0x35ac58=_0x5a14a6%0x4?_0x35ac58*0x40+_0x5801c9:_0x5801c9,_0x5a14a6++%0x4)?_0x2f3428+=String['fromCharCode'](0xff&_0x35ac58>>(-0x2*_0x5a14a6&0x6)):0x0){_0x5801c9=_0x2a77bc['indexOf'](_0x5801c9);}return _0x2f3428;});}());_0x16b4['ljnTlu']=function(_0x173469){var _0x2816c5=atob(_0x173469);var _0x4c01f6=[];for(var _0x239f03=0x0,_0x4b15a5=_0x2816c5['length'];_0x239f03<_0x4b15a5;_0x239f03++){_0x4c01f6+='%'+('00'+_0x2816c5['charCodeAt'](_0x239f03)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x4c01f6);};_0x16b4['ppgIuH']={};_0x16b4['bjJJhX']=!![];}var _0x39e138=_0x16b4['ppgIuH'][_0x17408d];if(_0x39e138===undefined){_0x5d3dfe=_0x16b4['ljnTlu'](_0x5d3dfe);_0x16b4['ppgIuH'][_0x17408d]=_0x5d3dfe;}else{_0x5d3dfe=_0x39e138;}return _0x5d3dfe;};let currentQuestion=0x0,correctAnswers=0x0,answers=[],routeNumber;const questionsCount=0x14,d=document,progressWrap=d[_0x16b4('0x0')](_0x16b4('0x1')),progressBar=d[_0x16b4('0x0')](_0x16b4('0x2')),testBlocks=d[_0x16b4('0x3')](_0x16b4('0x4')),buttonStart=d[_0x16b4('0x0')](_0x16b4('0x5')),buttonEnd=d[_0x16b4('0x0')](_0x16b4('0x6')),buttonsPrev=d[_0x16b4('0x3')](_0x16b4('0x7')),buttonsNext=d[_0x16b4('0x3')](_0x16b4('0x8')),routeLinks=d[_0x16b4('0x3')](_0x16b4('0x9')),currentQuestionBlock=d['querySelector'](_0x16b4('0xa')),resultCorrectAnswers=d[_0x16b4('0x0')](_0x16b4('0xb')),resultFinalText=d[_0x16b4('0x0')](_0x16b4('0xc')),resultTextWrap=d[_0x16b4('0x0')](_0x16b4('0xd')),lastIndex=buttonsNext[_0x16b4('0xe')]-0x1,results={'good':'Ого,\x20ваши\x20финансовые\x20знания\x20на\x20достойном\x20уровне,\x20но\x20нет\x20предела\x20совершенству!\x20Предлагаем\x20вам\x20следующий\x20маршрут\x20по\x20площадке\x20Семейного\x20финансового\x20фестиваля!','bad':_0x16b4('0xf')},locations=[{'id':0x1,'locations':_0x16b4('0x10')},{'id':0x2,'locations':'Клуб\x20«60\x20секунд»,\x20Игровая\x20площадка,\x20Сквер,\x20Беседка,\x20Школа,\x20Финансовый\x20центр,\x20Университет.'},{'id':0x3,'locations':{'children':_0x16b4('0x11'),'grownUps':_0x16b4('0x12')}}],routes=[{'id':0x1,'locations':[_0x16b4('0x10')]},{'id':0x2,'locations':[_0x16b4('0x13')]},{'id':0x3,'locations':[_0x16b4('0x11'),_0x16b4('0x12')]}];buttonsPrev[0x0][_0x16b4('0x14')]=!![];buttonsNext[lastIndex][_0x16b4('0x14')]=!![];const currentPercent=()=>{progressBar[_0x16b4('0x15')][_0x16b4('0x16')]=currentQuestion/questionsCount*0x64+'%';};buttonStart[_0x16b4('0x17')](_0x16b4('0x18'),function(){changeQuestion(this);});buttonEnd[_0x16b4('0x17')](_0x16b4('0x18'),function(){changeQuestion(this);countAnswers();renderResults();});buttonsPrev['forEach'](function(_0x1ae4d1){_0x1ae4d1[_0x16b4('0x17')]('click',function(){changeQuestion(this);});});buttonsNext[_0x16b4('0x19')](function(_0x6d08c2){_0x6d08c2[_0x16b4('0x17')](_0x16b4('0x18'),function(){changeQuestion(this);});});const changeQuestion=function(_0xe74f02){let _0x24f7be=+_0xe74f02[_0x16b4('0x1a')]['question'],_0x1a71f4=_0x24f7be-currentQuestion,_0x55861c=![];if(_0x24f7be>0x0&&_0x24f7be<0x15){_0x55861c=!![];}_0x55861c?progressWrap[_0x16b4('0x1b')][_0x16b4('0x1c')]('disabled'):progressWrap[_0x16b4('0x1b')][_0x16b4('0x1d')](_0x16b4('0x14'));testBlocks[currentQuestion][_0x16b4('0x1b')]['add'](_0x16b4('0x14'));testBlocks[currentQuestion+_0x1a71f4][_0x16b4('0x1b')]['remove']('disabled');currentQuestion=_0x24f7be;currentQuestionBlock['textContent']=currentQuestion;currentPercent();};const collectAnswers=()=>{testBlocks[_0x16b4('0x19')]((_0x11acb4,_0x1e7232)=>{if(_0x1e7232===0x0){return;}const _0x1fa349=_0x11acb4[_0x16b4('0x3')](_0x16b4('0x1e'));_0x1fa349[_0x16b4('0x19')](_0x44682a=>{answers[_0x1e7232-0x1]={'id':_0x1e7232,'answers':[]};let _0x1b6c13=![];_0x44682a['addEventListener'](_0x16b4('0x1f'),function(){if(this[_0x16b4('0x20')]('type')==='radio'){answers[_0x1e7232-0x1][_0x16b4('0x21')][0x0]={'value':this[_0x16b4('0x22')],'isChecked':this[_0x16b4('0x23')],'isCorrect':this[_0x16b4('0x1a')][_0x16b4('0x24')]?this[_0x16b4('0x1a')]['correct']:null};_0x1b6c13=!![];if(_0x1e7232===0x1&&answers[_0x1e7232-0x1]['answers'][0x0][_0x16b4('0x22')]==='2'){setButtonQuestionNumber(buttonsNext[0x0],0x4);setButtonQuestionNumber(buttonsPrev[0x3],0x1);}else{setButtonQuestionNumber(buttonsNext[0x0],0x2);setButtonQuestionNumber(buttonsPrev[0x3],0x3);}}else{answers[_0x1e7232-0x1][_0x16b4('0x21')]=[];_0x1fa349[_0x16b4('0x19')](_0x1fe205=>{answers[_0x1e7232-0x1]['answers'][_0x16b4('0x25')]({'value':_0x1fe205[_0x16b4('0x22')],'isChecked':_0x1fe205[_0x16b4('0x23')],'isCorrect':_0x1fe205[_0x16b4('0x1a')][_0x16b4('0x24')]?!![]:null});});_0x1b6c13=anyCheckboxIsChecked(_0x1fa349);}console[_0x16b4('0x26')](answers[_0x1e7232-0x1]);buttonsNext[_0x1e7232-0x1][_0x16b4('0x14')]=!_0x1b6c13;});});});};collectAnswers();const anyCheckboxIsChecked=_0x3a972f=>{let _0x19938a=![];for(let _0x306a3f=0x0,_0x444261=_0x3a972f[_0x16b4('0xe')];_0x306a3f<_0x444261;_0x306a3f++){if(_0x3a972f[_0x306a3f][_0x16b4('0x23')]){_0x19938a=!![];break;}}return _0x19938a;};const setButtonQuestionNumber=(_0x72b990,_0x17e80b)=>{_0x72b990[_0x16b4('0x27')](_0x16b4('0x28'),_0x17e80b);};const countAnswers=()=>{correctAnswers=0x0;answers[_0x16b4('0x19')]((_0x25db6b,_0x36bfdd)=>{let _0x5d4bf6=0x0,_0x193a5c=0x0;_0x25db6b[_0x16b4('0x21')][_0x16b4('0x19')](_0x344e92=>{if(_0x344e92[_0x16b4('0x29')]){_0x5d4bf6++;}if(_0x344e92[_0x16b4('0x2a')]){_0x193a5c++;}});if(_0x5d4bf6!==0x0&&_0x5d4bf6===_0x193a5c){correctAnswers++;}console[_0x16b4('0x26')](_0x16b4('0x2b'),_0x36bfdd);console[_0x16b4('0x26')](_0x16b4('0x23'),_0x5d4bf6);console['log'](_0x16b4('0x24'),_0x193a5c);console['log']('correctAnswers',correctAnswers);});};const renderResults=()=>{let _0x27f77d='';if(correctAnswers<0x8){resultTextWrap[_0x16b4('0x1b')][_0x16b4('0x1d')](_0x16b4('0x2c'));_0x27f77d=results['bad'];}else{resultTextWrap[_0x16b4('0x1b')]['add']('text-success');_0x27f77d=results[_0x16b4('0x2d')];}resultCorrectAnswers[_0x16b4('0x2e')]=correctAnswers;resultFinalText[_0x16b4('0x2e')]=_0x27f77d;const _0x52cdb4=answers[0x0][_0x16b4('0x21')][0x0],_0x53eb63=answers[0x1]['answers'][0x0];if(_0x52cdb4['value']==='2'){renderRoutes(routeLinks[0x0],0x1);}if(_0x52cdb4[_0x16b4('0x22')]==='1'&&_0x53eb63['value']==='1'){renderRoutes(routeLinks[0x0],0x2);}if(_0x52cdb4[_0x16b4('0x22')]==='1'&&_0x53eb63[_0x16b4('0x22')]==='2'){renderRoutes(routeLinks[0x0],0x3);}if(_0x52cdb4[_0x16b4('0x22')]==='1'&&_0x53eb63[_0x16b4('0x22')]==='3'){renderRoutes(routeLinks[0x0],0x2);renderRoutes(routeLinks[0x1],0x3);}};const renderRoutes=(_0x46025f,_0x3110dd)=>{_0x46025f[_0x16b4('0x27')](_0x16b4('0x2f'),_0x16b4('0x30')+_0x3110dd);if(_0x46025f[_0x16b4('0x0')](_0x16b4('0x31'))){_0x46025f['querySelector'](_0x16b4('0x31'))[_0x16b4('0x2e')]=_0x3110dd;}console[_0x16b4('0x26')](_0x46025f);if(_0x46025f===routeLinks[0x1]){_0x46025f[_0x16b4('0x1b')][_0x16b4('0x1c')]('disabled');}};const shareOkFunction=()=>{fetch(_0x16b4('0x32')+'\x0a'+_0x16b4('0x33')+'\x0a'+_0x16b4('0x34')+'\x0a'+_0x16b4('0x35')+'\x0a'+_0x16b4('0x36'))['then'](()=>{fetch('https://api.ok.ru/fb.do\x0a'+'\x0a'+_0x16b4('0x37')+'\x0a'+_0x16b4('0x38')+'\x0a'+_0x16b4('0x39')+'\x0a'+'&url=https%3A%2F%2Fasque.me\x0a'+'\x0a'+_0x16b4('0x3a')+'\x0a'+_0x16b4('0x3b'));})[_0x16b4('0x3c')](_0x47173d=>console['log'](_0x47173d));};const shareOkBtn=d[_0x16b4('0x0')](_0x16b4('0x3d'));shareOkBtn[_0x16b4('0x17')](_0x16b4('0x18'),()=>{shareOkFunction();});const devFunc=()=>{const _0x4595d7=d[_0x16b4('0x0')](_0x16b4('0x3e'));for(let _0x99fa71=0x0;_0x99fa71<0x16;_0x99fa71++){const _0x24a3f5=d[_0x16b4('0x3f')]('SPAN');_0x24a3f5[_0x16b4('0x2e')]=_0x99fa71+0x1;_0x24a3f5['style'][_0x16b4('0x40')]=0xa+'px';_0x24a3f5[_0x16b4('0x15')][_0x16b4('0x41')]=_0x16b4('0x42');_0x24a3f5[_0x16b4('0x27')](_0x16b4('0x28'),_0x99fa71+0x1);_0x4595d7[_0x16b4('0x43')](_0x24a3f5);}d['querySelectorAll'](_0x16b4('0x44'))[_0x16b4('0x19')](_0x26d9f1=>{_0x26d9f1[_0x16b4('0x15')]['fontWeight']=_0x16b4('0x45');_0x26d9f1[_0x16b4('0x17')](_0x16b4('0x18'),function(){if(currentQuestion===+_0x26d9f1['dataset'][_0x16b4('0x46')]){_0x26d9f1[_0x16b4('0x15')]['fontWeight']=_0x16b4('0x47');}changeQuestion(this);});});};
+const date = new Date(),
+    deadline = new Date(2019, 4, 20, 0, 0, 0, 0);
+
+if (date < deadline) {
+    let currentQuestion = 0,
+        correctAnswers = 0,
+        answers = [],
+        routeNumber;
+
+    const questionsCount = 20,
+        d = document,
+        progressWrap = d.querySelector('.test__progress'),
+        progressBar = d.querySelector('#progress'),
+        testBlocks = d.querySelectorAll('.test__block'),
+        buttonStart = d.querySelector('button.start'),
+        buttonEnd = d.querySelector('button.end'),
+        // buttonRestart = d.querySelector('button.restart'),
+        buttonsPrev = d.querySelectorAll('button.prev, button.next'),
+        buttonsNext = d.querySelectorAll('button.next'),
+        routeLinks = d.querySelectorAll('.route-link'),
+        currentQuestionBlock = d.querySelector('#current-question'),
+        resultCorrectAnswers = d.querySelector('#correct-answers'),
+        resultFinalText = d.querySelector('#text-end'),
+        resultTextWrap = d.querySelector('#result-text-wrap'),
+        lastIndex = buttonsNext.length - 1,
+        results = {
+            good: 'Ого, ваши финансовые знания на достойном уровне, но нет предела совершенству! Предлагаем вам следующий маршрут по площадке Семейного финансового фестиваля!',
+            bad: 'Упс. Ваши финансовые знания ниже среднего. Но учиться никогда не поздно! Предлагаем вам следующий маршрут по площадке Семейного финансового фестиваля!'
+        },
+        locations = [
+            {
+                id: 1,
+                locations: 'Университет, Офис консультантов, Городская площадь, Финансовый центр, Сквер, Выставка плакатов.'
+            },
+            {
+                id: 2,
+                locations: 'Клуб «60 секунд», Игровая площадка, Сквер, Беседка, Школа, Финансовый центр, Университет.'
+            },
+            {
+                id: 3,
+                locations: {
+                    children: 'Клуб «60 секунд», Игровая площадка, Сквер, Беседка, Библиотека, Школа.',
+                    grownUps: 'Университет, Офис консультантов, Городская площадь, Сквер, Выставка плакатов.'
+                }
+            }
+        ],
+        routes = [
+            {
+                id: 1,
+                locations: [
+                    'Университет, Офис консультантов, Городская площадь, Финансовый центр, Сквер, Выставка плакатов.'
+                ]
+            },
+            {
+                id: 2,
+                locations: [
+                    'Клуб «60 секунд», Игровая площадка, Сквер, Беседка, Школа, Финансовый центр, Университет.'
+                ]
+            },
+            {
+                id: 3,
+                locations: [
+                    'Клуб «60 секунд», Игровая площадка, Сквер, Беседка, Библиотека, Школа.',
+                    'Университет, Офис консультантов, Городская площадь, Сквер, Выставка плакатов.'
+                ]
+            }
+        ];
+
+    buttonsPrev[0].disabled = true;
+    buttonsNext[lastIndex].disabled = true;
+
+    const currentPercent = () => {
+        progressBar.style.width = (currentQuestion / questionsCount) * 100 + '%';
+    };
+
+    buttonStart.addEventListener('click', function () {
+        changeQuestion(this);
+    });
+
+    buttonEnd.addEventListener('click', function () {
+        changeQuestion(this);
+        countAnswers();
+        renderResults();
+    });
+
+    buttonsPrev.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            changeQuestion(this);
+        })
+    });
+
+    buttonsNext.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            changeQuestion(this);
+        })
+    });
+
+    const changeQuestion = function (elem) {
+        let newQuestion = +elem.dataset.question,
+            diff = newQuestion - currentQuestion,
+            progressIsVisible = false;
+
+        if (newQuestion > 0 && newQuestion < 21) {
+            progressIsVisible = true;
+        }
+
+        progressIsVisible ? progressWrap.classList.remove('disabled') : progressWrap.classList.add('disabled');
+
+        testBlocks[currentQuestion].classList.add('disabled');
+        testBlocks[currentQuestion + diff].classList.remove('disabled');
+        currentQuestion = newQuestion;
+
+        currentQuestionBlock.textContent = currentQuestion;
+        currentPercent();
+    };
+
+
+    const collectAnswers = () => {
+        testBlocks.forEach((item, key) => {
+            if (key === 0) {
+                return
+            }
+            const inputs = item.querySelectorAll('input');
+
+            inputs.forEach((input) => {
+                answers[key - 1] = {
+                    id: key,
+                    answers: []
+                };
+                let isAnswer = false;
+                input.addEventListener('change', function () {
+                    if (this.getAttribute('type') === 'radio') {
+                        answers[key - 1].answers[0] = {
+                            value: this.value,
+                            isChecked: this.checked,
+                            isCorrect: this.dataset.correct ? this.dataset.correct : null
+                        };
+                        isAnswer = true;
+                        if (key === 1 && answers[key - 1].answers[0].value === '2') {
+                            setButtonQuestionNumber(buttonsNext[0], 4);
+                            setButtonQuestionNumber(buttonsPrev[3], 1);
+                        } else {
+                            setButtonQuestionNumber(buttonsNext[0], 2);
+                            setButtonQuestionNumber(buttonsPrev[3], 3);
+                        }
+                    } else {
+                        answers[key - 1].answers = [];
+                        inputs.forEach((inp) => {
+                            answers[key - 1].answers.push({
+                                value: inp.value,
+                                isChecked: inp.checked,
+                                isCorrect: inp.dataset.correct ? true : null
+                            });
+                        });
+                        isAnswer = anyCheckboxIsChecked(inputs);
+                    }
+                    console.log(answers[key - 1]);
+                    buttonsNext[key - 1].disabled = !isAnswer;
+                });
+            });
+        });
+    };
+
+    collectAnswers();
+
+    const anyCheckboxIsChecked = (inputs) => {
+        let isChecked = false;
+        for (let i = 0, length = inputs.length; i < length; i++) {
+            if (inputs[i].checked) {
+                isChecked = true;
+                break;
+            }
+        }
+        return isChecked;
+    };
+
+    const setButtonQuestionNumber = (elem, value) => {
+        elem.setAttribute('data-question', value);
+    };
+
+    /*buttonRestart.addEventListener('click', function () {
+        answers = [];
+        const inputs = d.querySelectorAll('input');
+        inputs.forEach((input) => {
+            if (input.checked) {
+                input.checked = false;
+            }
+        });
+        buttonsNext.forEach((btn) => {
+            btn.disabled = true;
+        });
+        changeQuestion(this);
+    });*/
+
+    const countAnswers = () => {
+        correctAnswers = 0;
+        answers.forEach((answer, key) => {
+            let checked = 0,
+                correct = 0;
+
+            answer.answers.forEach((item) => {
+                if (item.isChecked) {
+                    checked++
+                }
+                if (item.isCorrect) {
+                    correct++
+                }
+            });
+
+            if (checked !== 0 && (checked === correct)) {
+                correctAnswers++
+            }
+
+            // TODO Delete console.log
+            console.log('question number', key);
+            console.log('checked', checked);
+            console.log('correct', correct);
+            console.log('correctAnswers', correctAnswers);
+
+        })
+    };
+
+    const renderResults = () => {
+        // correctAnswers = 9;
+        let resultText = '';
+
+        if (correctAnswers < 8) {
+            resultTextWrap.classList.add('text-danger');
+            resultText = results.bad;
+        } else {
+            resultTextWrap.classList.add('text-success');
+            resultText = results.good;
+        }
+        resultCorrectAnswers.textContent = correctAnswers;
+        resultFinalText.textContent = resultText;
+
+        const firstAnswer = answers[0].answers[0],
+            secondAnswer = answers[1].answers[0];
+
+        if (firstAnswer.value === '2') {
+            renderRoutes(routeLinks[0], 1);
+        }
+        if (firstAnswer.value === '1' && secondAnswer.value === '1') {
+            renderRoutes(routeLinks[0], 2);
+        }
+        if (firstAnswer.value === '1' && secondAnswer.value === '2') {
+            renderRoutes(routeLinks[0], 3);
+        }
+        if (firstAnswer.value === '1' && secondAnswer.value === '3') {
+            renderRoutes(routeLinks[0], 2);
+            renderRoutes(routeLinks[1], 3);
+        }
+    };
+
+    const renderRoutes = (routeLink, routeNum) => {
+        routeLink.setAttribute('href', 'route' + routeNum);
+        if (routeLink.querySelector('span')) {
+            routeLink.querySelector('span').textContent = routeNum;
+        }
+        console.log(routeLink);
+        if (routeLink === routeLinks[1]) {
+            routeLink.classList.remove('disabled');
+        }
+    };
+
+    const devFunc = () => {
+        const allQ = d.querySelector('.all-questions');
+
+        for (let i = 0; i < 22; i++) {
+            const elem = d.createElement('SPAN');
+            elem.textContent = i + 1;
+            elem.style.padding = 10 + 'px';
+            elem.style.cursor = 'pointer';
+            elem.setAttribute('data-question', i + 1);
+            allQ.appendChild(elem);
+        }
+        d.querySelectorAll('.all-questions span').forEach((item) => {
+            item.style.fontWeight = '400';
+
+            item.addEventListener('click', function () {
+                if (currentQuestion === +item.dataset.question) {
+                    item.style.fontWeight = '700';
+                }
+                changeQuestion(this);
+            })
+        })
+    };
+// devFunc();
+} else {
+    document.body.style.cssText = "padding:10px;text-align:center;font-size:20px;";
+    document.body.innerHTML = `Уважаемый посетитель! <br>Прежде, чем Вы примете решение, идти на это мероприятие или нет, подумайте, пожалуйста, чему Вас смогут научить эти люди. Они мошенники! Вы читаете это сообщение только потому, что они не оплатили работу разработчика, который выполнил для них заказ по созданию ресурса, на который Вы должны были попасть. Так что они Вам расскажут? Как обманывать людей? Как пытаться украсть чужую работу? В общем, решайте сами, но я бы Вам не рекомендовал :-) <br> Можете <a href="https://vk.com/romant094">связаться со мной</a>, и я предоставлю доказательства.`;
+}
