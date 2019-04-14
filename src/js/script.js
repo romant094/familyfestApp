@@ -292,7 +292,6 @@ shareOkBtn.addEventListener('click', ()=>{
     shareOkFunction();
 });
 
-//TODO remove devFunc
 const devFunc = () => {
     const allQ = d.querySelector('.all-questions');
 
