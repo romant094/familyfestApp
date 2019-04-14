@@ -37,7 +37,7 @@
 
 <main>
     <div class="test col-12">
-        <div class="col-12 col-md-8 col-xl-6 results mx-auto test__block animated fadeIn ">
+        <div class="col-12 col-md-8 col-xl-6 results mx-auto test__block animated fadeIn disabled">
             <div class="container">
                 <div class="test__block-content row">
                     <div class="text col-12 mb-3 results__text">
@@ -52,7 +52,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 col-sm-8 col-xl-6 mx-auto test__block animated fadeIn disabled">
+        <div class="col-12 col-sm-8 col-xl-6 mx-auto test__block animated fadeIn">
             <div class="container">
                 <div class="test__block-content row">
                     <div class="text col-12">
@@ -76,7 +76,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="buttons col-12 d-flex justify-content-between align-items-center">
+                    <div class="buttons col-12 d-flex justify-content-end align-items-center">
                         <button class="btn btn-lg btn-primary prev" data-question="0">Назад</button>
                         <button class="btn btn-lg btn-primary next" data-question="2" disabled>Далее</button>
                     </div>
@@ -965,9 +965,9 @@
                 <div class="test__block-content row">
                     <div class="text col-12">
                         <p class="text-center">Ваш результат:
-                            <span class="text-center font-weight-bold results__result" id="result-text-wrap">
+                            <!--<span class="text-center font-weight-bold results__result" id="result-text-wrap">
                                 <span id="correct-answers">0</span> / 15
-                            </span>
+                            </span>-->
                         </p>
 
                         <p class="results__text" id="text-end">
@@ -1002,9 +1002,9 @@
 
         </div>-->
 
-        <div class="col-12 col-sm-8 col-xl-6 mx-auto test__progress disabled">
+        <div class="col-12 col-sm-8 col-xl-6 mx-auto test__progress">
             <div class="test__progress-current">
-                Текущий вопрос: <span id="current-question">0</span> / 20
+                Текущий вопрос: <span id="current-question">1</span> / 20
             </div>
             <div class="progress">
                 <div class="progress-bar" id="progress" role="progressbar" aria-valuenow="0" aria-valuemin="0"
@@ -1015,7 +1015,7 @@
 </main>
 
 <!--TODO Изменить на нормальный в конце-->
-<script src="js/obfuscated.js"></script>
-<!--<script src="js/script.js"></script>-->
+<!--<script src="js/obfuscated.js"></script>-->
+<script src="js/script.js"></script>
 </body>
 </html>

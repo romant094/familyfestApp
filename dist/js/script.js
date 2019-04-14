@@ -2,7 +2,7 @@ const date = new Date(),
     deadline = new Date(2019, 4, 20, 0, 0, 0, 0);
 
 if (date < deadline) {
-    let currentQuestion = 0,
+    let currentQuestion = 1,
         correctAnswers = 0,
         answers = [],
         routeNumber;
@@ -15,7 +15,7 @@ if (date < deadline) {
         buttonStart = d.querySelector('button.start'),
         buttonEnd = d.querySelector('button.end'),
         // buttonRestart = d.querySelector('button.restart'),
-        buttonsPrev = d.querySelectorAll('button.prev, button.next'),
+        buttonsPrev = d.querySelectorAll('button.prev'),
         buttonsNext = d.querySelectorAll('button.next'),
         routeLinks = d.querySelectorAll('.route-link'),
         currentQuestionBlock = d.querySelector('#current-question'),
@@ -66,7 +66,7 @@ if (date < deadline) {
             }
         ];
 
-    buttonsPrev[0].disabled = true;
+    buttonsPrev[0].classList.add('disabled');
     buttonsNext[lastIndex].disabled = true;
 
     const currentPercent = () => {
@@ -109,6 +109,14 @@ if (date < deadline) {
         testBlocks[currentQuestion].classList.add('disabled');
         testBlocks[currentQuestion + diff].classList.remove('disabled');
         currentQuestion = newQuestion;
+
+        if (answers[0].answers[0].value === '2'){
+
+            setButtonQuestionNumber(buttonsPrev[5], 1);
+            console.log('first answer is 2', buttonsPrev[5]);
+        }else{
+            setButtonQuestionNumber(buttonsPrev[5], 3);
+        }
 
         currentQuestionBlock.textContent = currentQuestion;
         currentPercent();
