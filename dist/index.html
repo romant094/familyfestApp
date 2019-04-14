@@ -77,7 +77,7 @@
                         </div>
                     </div>
                     <div class="buttons col-12 d-flex justify-content-end align-items-center">
-                        <button class="btn btn-lg btn-primary prev" data-question="0">Назад</button>
+                        <button class="btn btn-lg btn-primary prev disabled" data-question="0">Назад</button>
                         <button class="btn btn-lg btn-primary next" data-question="2" disabled>Далее</button>
                     </div>
                 </div>
@@ -998,20 +998,21 @@
         </div>
 
         <!--TODO remove dev item-->
-        <!--<div class="d-flex all-questions">
+        <div class="d-flex all-questions disabled">
 
-        </div>-->
+        </div>
 
         <div class="col-12 col-sm-8 col-xl-6 mx-auto test__progress">
             <div class="test__progress-current">
                 Текущий вопрос: <span id="current-question">1</span> / 20
             </div>
             <div class="progress">
-                <div class="progress-bar" id="progress" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                <div class="progress-bar" id="progress" role="progressbar" aria-valuenow="5" aria-valuemin="0"
                      aria-valuemax="100"></div>
             </div>
         </div>
     </div>
+    <div class="main-bg"></div>
 </main>
 
 <!--TODO Изменить на нормальный в конце-->
