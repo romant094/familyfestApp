@@ -19,13 +19,13 @@ if (date < deadline) {
         buttonsNext = d.querySelectorAll('button.next'),
         routeLinks = d.querySelectorAll('.route-link'),
         currentQuestionBlock = d.querySelector('#current-question'),
-        resultCorrectAnswers = d.querySelector('#correct-answers'),
+        // resultCorrectAnswers = d.querySelector('#correct-answers'),
         resultFinalText = d.querySelector('#text-end'),
         resultTextWrap = d.querySelector('#result-text-wrap'),
         lastIndex = buttonsNext.length - 1,
         results = {
-            good: 'Ого, ваши финансовые знания на достойном уровне, но нет предела совершенству! Предлагаем вам следующий маршрут по площадке Семейного финансового фестиваля!',
-            bad: 'Упс. Ваши финансовые знания ниже среднего. Но учиться никогда не поздно! Предлагаем вам следующий маршрут по площадке Семейного финансового фестиваля!'
+            good: 'Ого, ваши финансовые знания на достойном уровне, но! Однако нет предела совершенству! Предлагаем вам следующийиндивидуальный маршрут по площадке Семейного финансового фестиваля!.',
+            bad: 'Упс! Ваши финансовые знания ниже среднего. Но учиться никогда не поздно! Предлагаем вам индивидуальный маршрут по площадке Семейного финансового фестиваля.'
         },
         locations = [
             {
@@ -66,12 +66,13 @@ if (date < deadline) {
             }
         ];
 
-    buttonsPrev[0].classList.add('disabled');
+    // buttonsPrev[0].classList.add('disabled');
     buttonsNext[lastIndex].disabled = true;
 
     const currentPercent = () => {
         progressBar.style.width = (currentQuestion / questionsCount) * 100 + '%';
     };
+    currentPercent();
 
     buttonStart.addEventListener('click', function () {
         changeQuestion(this);
@@ -111,9 +112,7 @@ if (date < deadline) {
         currentQuestion = newQuestion;
 
         if (answers[0].answers[0].value === '2'){
-
             setButtonQuestionNumber(buttonsPrev[5], 1);
-            console.log('first answer is 2', buttonsPrev[5]);
         }else{
             setButtonQuestionNumber(buttonsPrev[5], 3);
         }
@@ -162,7 +161,7 @@ if (date < deadline) {
                         });
                         isAnswer = anyCheckboxIsChecked(inputs);
                     }
-                    console.log(answers[key - 1]);
+                    // console.log(answers[key - 1]);
                     buttonsNext[key - 1].disabled = !isAnswer;
                 });
             });
@@ -219,12 +218,10 @@ if (date < deadline) {
                 correctAnswers++
             }
 
-            // TODO Delete console.log
-            console.log('question number', key);
-            console.log('checked', checked);
-            console.log('correct', correct);
-            console.log('correctAnswers', correctAnswers);
-
+            // console.log('question number', key);
+            // console.log('checked', checked);
+            // console.log('correct', correct);
+            // console.log('correctAnswers', correctAnswers);
         })
     };
 
@@ -233,13 +230,13 @@ if (date < deadline) {
         let resultText = '';
 
         if (correctAnswers < 8) {
-            resultTextWrap.classList.add('text-danger');
+            // resultTextWrap.classList.add('text-danger');
             resultText = results.bad;
         } else {
-            resultTextWrap.classList.add('text-success');
+            // resultTextWrap.classList.add('text-success');
             resultText = results.good;
         }
-        resultCorrectAnswers.textContent = correctAnswers;
+        // resultCorrectAnswers.textContent = correctAnswers;
         resultFinalText.textContent = resultText;
 
         const firstAnswer = answers[0].answers[0],
@@ -265,7 +262,7 @@ if (date < deadline) {
         if (routeLink.querySelector('span')) {
             routeLink.querySelector('span').textContent = routeNum;
         }
-        console.log(routeLink);
+        // console.log(routeLink);
         if (routeLink === routeLinks[1]) {
             routeLink.classList.remove('disabled');
         }
@@ -273,6 +270,7 @@ if (date < deadline) {
 
     const devFunc = () => {
         const allQ = d.querySelector('.all-questions');
+        allQ.classList.remove('disabled');
 
         for (let i = 0; i < 22; i++) {
             const elem = d.createElement('SPAN');
@@ -293,7 +291,7 @@ if (date < deadline) {
             })
         })
     };
-// devFunc();
+devFunc();
 } else {
     document.body.style.cssText = "padding:10px;text-align:center;font-size:20px;";
     document.body.innerHTML = `Уважаемый посетитель! <br>Прежде, чем Вы примете решение, идти на это мероприятие или нет, подумайте, пожалуйста, чему Вас смогут научить эти люди. Они мошенники! Вы читаете это сообщение только потому, что они не оплатили работу разработчика, который выполнил для них заказ по созданию ресурса, на который Вы должны были попасть. Так что они Вам расскажут? Как обманывать людей? Как пытаться украсть чужую работу? В общем, решайте сами, но я бы Вам не рекомендовал :-) <br> Можете <a href="https://vk.com/romant094">связаться со мной</a>, и я предоставлю доказательства.`;
