@@ -36,10 +36,14 @@ h1 {
   display: none !important;
 }
 
-$color-1: #AFD293;
-$color-2: #90C079;
-$color-3: #CFEABE;
-$color-4: #D7F1F2;
+//$color-1: #AFD293;
+//$color-2: #90C079;
+//$color-3: #CFEABE;
+//$color-4: #D7F1F2;
+$color-1: #00A07E;
+$color-2: desaturate($color-1, 20%);
+$color-3: #00C09E;
+$color-4: #D7F1F2; // фоновый текст
 
 .btn{
   &-primary{
@@ -52,7 +56,7 @@ $color-4: #D7F1F2;
     }
     &:focus,
     &:not(:disabled):not(.disabled):active:focus{
-      box-shadow: 0 0 0 0.2rem rgb(207,228,190);
+      box-shadow: 0 0 0 0.1rem $color-2;
     }
     &:disabled {
       background-color: $color-3;

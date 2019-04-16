@@ -41,19 +41,19 @@ h1 {
 }
 
 .btn-primary {
-  background-color: #AFD293;
-  border-color: #AFD293;
+  background-color: #00A07E;
+  border-color: #00A07E;
 }
 .btn-primary:hover, .btn-primary:not(:disabled):not(.disabled):active {
-  background-color: #90C079;
-  border-color: #90C079;
+  background-color: #109075;
+  border-color: #109075;
 }
 .btn-primary:focus, .btn-primary:not(:disabled):not(.disabled):active:focus {
-  box-shadow: 0 0 0 0.2rem #cfe4be;
+  box-shadow: 0 0 0 0.1rem #109075;
 }
 .btn-primary:disabled {
-  background-color: #CFEABE;
-  border-color: #CFEABE;
+  background-color: #00C09E;
+  border-color: #00C09E;
   opacity: 1;
 }
 .btn-link--custom {
@@ -88,17 +88,17 @@ h1 {
 
 .route-link {
   font-size: 22px;
-  color: #AFD293;
+  color: #00A07E;
 }
 .route-link:hover {
-  color: #90C079;
+  color: #109075;
 }
 
 .progress {
   background-color: #eee;
 }
 .progress-bar {
-  background-color: #AFD293;
+  background-color: #00A07E;
 }
 
 main {
