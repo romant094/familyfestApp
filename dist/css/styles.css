@@ -119,6 +119,7 @@ main .main-bg {
   height: 382px;
   background: url(../image/bg.png) center bottom 0 no-repeat;
   opacity: 0.7;
+  z-index: 8;
 }
 main .main-bg--text {
   background: none;
@@ -129,7 +130,8 @@ main .main-bg--text {
   opacity: 0.4;
   text-align: center;
   height: auto;
-  top: 380px;
+  top: 25%;
+  z-index: 9;
 }
 @media screen and (max-width: 1120px) {
   main .main-bg--text {
