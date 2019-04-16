@@ -1,3 +1,22 @@
+@font-face {
+  font-family: OpenSans;
+  src: url(../fonts/OpenSans-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: OpenSans;
+  src: url(../fonts/OpenSans-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: CoreSans;
+  src: url(../fonts/CoreSans-ExtraBold.ttf);
+  font-weight: 900;
+}
+body{
+  font-family: 'OpenSans';
+  font-weight: 400;
+}
 noscript {
   display: flex;
   justify-content: center;
@@ -10,17 +29,20 @@ noscript {
 h1 {
   text-align: center;
 }
+.dev{
+  display: none !important;
+}
 .disabled {
-  display: none;
+  display: none !important;
 }
 
 $color-1: #AFD293;
 $color-2: #90C079;
 $color-3: #CFEABE;
+$color-4: #D7F1F2;
 
 .btn{
-  &-primary,
-  &:disabled{
+  &-primary{
     background-color: $color-1;
     border-color: $color-1;
     &:hover,
@@ -31,6 +53,11 @@ $color-3: #CFEABE;
     &:focus,
     &:not(:disabled):not(.disabled):active:focus{
       box-shadow: 0 0 0 0.2rem rgb(207,228,190);
+    }
+    &:disabled {
+      background-color: $color-3;
+      border-color: $color-3;
+      opacity: 1;
     }
   }
   &-link{
@@ -65,9 +92,13 @@ $color-3: #CFEABE;
 }
 .route-link{
   font-size: 22px;
+  color: $color-1;
+  &:hover{
+    color: $color-2;
+  }
 }
 .progress{
-  background-color: #fff;
+  background-color: #eee;
   &-bar{
     background-color: $color-1;
   }
@@ -80,7 +111,7 @@ main {
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: 30px 0 100px;
+  //padding: 30px 0 100px;
 
   .main-bg{
     position: absolute;
@@ -90,16 +121,38 @@ main {
     width: 100%;
     height: 382px;
     background: url(../image/bg.png) center bottom 0 no-repeat;
-    opacity: 0.2;
+    opacity: 0.7;
+    &--text{
+      background: none;
+      font-size: 54px;
+      line-height: 1.5;
+      font-family: 'CoreSans';
+      color: $color-4;
+      opacity: 0.4;
+      text-align: center;
+      height: auto;
+      top: 380px;
+      @media screen and (max-width: 1120px){
+        font-size: 42px;
+      }
+      @media screen and (max-width: 710px){
+        font-size: 32px;
+      }
+    }
   }
 
   .test {
+    &__progress{
+      margin-bottom: 20px;
+      &-current{
+        font-family: 'CoreSans';
+      }
+    }
     z-index: 10;
     &__block {
       padding: 50px 10px;
-      border: 1px solid black;
+      border: 1px solid #eee;
       border-radius: 0.8rem;
-      margin-bottom: 32px;
 
       &-content {
         display: flex;
@@ -108,7 +161,11 @@ main {
 
         .text {
           font-size: 1.5rem;
-          &__question,
+          &__question{
+            font-family: 'CoreSans';
+            font-weight: 900;
+            margin-bottom: 2rem;
+          }
           &__answers{
             margin-bottom: 1rem;
           }

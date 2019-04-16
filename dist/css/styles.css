@@ -1,3 +1,23 @@
+@font-face {
+  font-family: OpenSans;
+  src: url(../fonts/OpenSans-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: OpenSans;
+  src: url(../fonts/OpenSans-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: CoreSans;
+  src: url(../fonts/CoreSans-ExtraBold.ttf);
+  font-weight: 900;
+}
+body {
+  font-family: "OpenSans";
+  font-weight: 400;
+}
+
 noscript {
   display: flex;
   justify-content: center;
@@ -12,20 +32,29 @@ h1 {
   text-align: center;
 }
 
-.disabled {
-  display: none;
+.dev {
+  display: none !important;
 }
 
-.btn-primary, .btn:disabled {
+.disabled {
+  display: none !important;
+}
+
+.btn-primary {
   background-color: #AFD293;
   border-color: #AFD293;
 }
-.btn-primary:hover, .btn-primary:not(:disabled):not(.disabled):active, .btn:disabled:hover, .btn:disabled:not(:disabled):not(.disabled):active {
+.btn-primary:hover, .btn-primary:not(:disabled):not(.disabled):active {
   background-color: #90C079;
   border-color: #90C079;
 }
-.btn-primary:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .btn:disabled:focus, .btn:disabled:not(:disabled):not(.disabled):active:focus {
+.btn-primary:focus, .btn-primary:not(:disabled):not(.disabled):active:focus {
   box-shadow: 0 0 0 0.2rem #cfe4be;
+}
+.btn-primary:disabled {
+  background-color: #CFEABE;
+  border-color: #CFEABE;
+  opacity: 1;
 }
 .btn-link--custom {
   padding-top: 0;
@@ -59,10 +88,14 @@ h1 {
 
 .route-link {
   font-size: 22px;
+  color: #AFD293;
+}
+.route-link:hover {
+  color: #90C079;
 }
 
 .progress {
-  background-color: #fff;
+  background-color: #eee;
 }
 .progress-bar {
   background-color: #AFD293;
@@ -76,7 +109,6 @@ main {
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: 30px 0 100px;
 }
 main .main-bg {
   position: absolute;
@@ -86,16 +118,42 @@ main .main-bg {
   width: 100%;
   height: 382px;
   background: url(../image/bg.png) center bottom 0 no-repeat;
-  opacity: 0.2;
+  opacity: 0.7;
+}
+main .main-bg--text {
+  background: none;
+  font-size: 54px;
+  line-height: 1.5;
+  font-family: "CoreSans";
+  color: #D7F1F2;
+  opacity: 0.4;
+  text-align: center;
+  height: auto;
+  top: 380px;
+}
+@media screen and (max-width: 1120px) {
+  main .main-bg--text {
+    font-size: 42px;
+  }
+}
+@media screen and (max-width: 710px) {
+  main .main-bg--text {
+    font-size: 32px;
+  }
 }
 main .test {
   z-index: 10;
 }
+main .test__progress {
+  margin-bottom: 20px;
+}
+main .test__progress-current {
+  font-family: "CoreSans";
+}
 main .test__block {
   padding: 50px 10px;
-  border: 1px solid black;
+  border: 1px solid #eee;
   border-radius: 0.8rem;
-  margin-bottom: 32px;
 }
 main .test__block-content {
   display: flex;
@@ -105,7 +163,12 @@ main .test__block-content {
 main .test__block-content .text {
   font-size: 1.5rem;
 }
-main .test__block-content .text__question, main .test__block-content .text__answers {
+main .test__block-content .text__question {
+  font-family: "CoreSans";
+  font-weight: 900;
+  margin-bottom: 2rem;
+}
+main .test__block-content .text__answers {
   margin-bottom: 1rem;
 }
 main .results__text {

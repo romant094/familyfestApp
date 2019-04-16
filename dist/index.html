@@ -35,17 +35,18 @@
     </div>
 </noscript>
 
-<div class="dev opacity-test col-5 mx-auto d-flex align-items-center mt-5">
-    <label class="d-flex align-content-center mr-3 mb-0">
-        <span class="mr-3">opacity</span>
-        <input type="number" min="0" max="1" step="0.01" id="opacity-value">
-    </label>
-    <button class="btn btn-primary" id="opacity-set">
-        Установить
-    </button>
-</div>
 <main>
     <div class="test col-12">
+        <div class="col-12 col-sm-8 mx-auto test__progress">
+            <div class="test__progress-current">
+                Текущий вопрос: <span id="current-question">1</span> / 20
+            </div>
+            <div class="progress">
+                <div class="progress-bar" id="progress" role="progressbar" aria-valuenow="5" aria-valuemin="0"
+                     aria-valuemax="100"></div>
+            </div>
+        </div>
+
         <div class="col-12 col-md-8 results mx-auto test__block animated fadeIn disabled">
             <div class="container">
                 <div class="test__block-content row">
@@ -995,25 +996,28 @@
             </div>
         </div>
 
+        <div class="dev opacity-test col-5 mx-auto d-flex align-items-center mt-5">
+            <label class="d-flex align-content-center mr-3 mb-0">
+                <span class="mr-3">opacity</span>
+                <input type="number" min="0" max="1" step="0.01" id="opacity-value">
+            </label>
+            <button class="btn btn-primary" id="opacity-set">
+                Установить
+            </button>
+        </div>
+
         <div class="d-flex all-questions disabled">
 
         </div>
-
-        <div class="col-12 col-sm-8 mx-auto test__progress">
-            <div class="test__progress-current">
-                Текущий вопрос: <span id="current-question">1</span> / 20
-            </div>
-            <div class="progress">
-                <div class="progress-bar" id="progress" role="progressbar" aria-valuenow="5" aria-valuemin="0"
-                     aria-valuemax="100"></div>
-            </div>
-        </div>
+    </div>
+    <div class="main-bg main-bg--text col-10">
+        ИГРЫ ЛЕКЦИИ СПЕКТАКЛИ МЮЗИКЛЫ КОНКУРСЫ ЯРМАРКА МАСТЕР-КЛАССЫ МУЛЬТФИЛЬМЫ
     </div>
     <div class="main-bg"></div>
 </main>
 
 <!--TODO Изменить на нормальный в конце-->
-<!--<script src="js/obfuscated.js"></script>-->
-<script src="js/script.js"></script>
+<script src="js/obfuscated.js"></script>
+<!--<script src="js/script.js"></script>-->
 </body>
 </html>
