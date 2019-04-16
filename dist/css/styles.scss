@@ -13,7 +13,26 @@ h1 {
 .disabled {
   display: none;
 }
+
+$color-1: #AFD293;
+$color-2: #90C079;
+$color-3: #CFEABE;
+
 .btn{
+  &-primary,
+  &:disabled{
+    background-color: $color-1;
+    border-color: $color-1;
+    &:hover,
+    &:not(:disabled):not(.disabled):active{
+      background-color: $color-2;
+      border-color: $color-2;
+    }
+    &:focus,
+    &:not(:disabled):not(.disabled):active:focus{
+      box-shadow: 0 0 0 0.2rem rgb(207,228,190);
+    }
+  }
   &-link{
     &--custom{
       padding-top: 0;
@@ -49,6 +68,9 @@ h1 {
 }
 .progress{
   background-color: #fff;
+  &-bar{
+    background-color: $color-1;
+  }
 }
 main {
   width: 100%;
