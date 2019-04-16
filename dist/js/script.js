@@ -22,6 +22,9 @@ if (date < deadline) {
         // resultCorrectAnswers = d.querySelector('#correct-answers'),
         resultFinalText = d.querySelector('#text-end'),
         resultTextWrap = d.querySelector('#result-text-wrap'),
+        opacityValue = d.querySelector('#opacity-value'),
+        opacitySet = d.querySelector('#opacity-set'),
+        mainBg = d.querySelector('.main-bg'),
         lastIndex = buttonsNext.length - 1,
         results = {
             good: 'Ого, ваши финансовые знания на достойном уровне, но! Однако нет предела совершенству! Предлагаем вам следующийиндивидуальный маршрут по площадке Семейного финансового фестиваля!.',
@@ -184,7 +187,7 @@ if (date < deadline) {
 
     const countAnswers = () => {
         correctAnswers = 0;
-        answers.forEach((answer, key) => {
+        answers.forEach((answer) => {
             let checked = 0,
                 correct = 0;
 
@@ -251,6 +254,7 @@ if (date < deadline) {
         }
     };
 
+    // Dev functions
     const devFunc = () => {
         const allQ = d.querySelector('.all-questions');
         allQ.classList.remove('disabled');
@@ -274,7 +278,12 @@ if (date < deadline) {
             })
         })
     };
-// devFunc();
+    // devFunc();
+
+    opacitySet.addEventListener('click', ()=>{
+        console.log(opacityValue.value);
+        mainBg.style.opacity = opacityValue.value;
+    });
 } else {
     document.body.style.cssText = "padding:10px;text-align:center;font-size:20px;";
     document.body.innerHTML = `Уважаемый посетитель! <br>Прежде, чем Вы примете решение, идти на это мероприятие или нет, подумайте, пожалуйста, чему Вас смогут научить эти люди. Они мошенники! Вы читаете это сообщение только потому, что они не оплатили работу разработчика, который выполнил для них заказ по созданию ресурса, на который Вы должны были попасть. Так что они Вам расскажут? Как обманывать людей? Как пытаться украсть чужую работу? В общем, решайте сами, но я бы Вам не рекомендовал :-) <br> Можете <a href="https://vk.com/romant094">связаться со мной</a>, и я предоставлю доказательства.`;
