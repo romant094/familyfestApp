@@ -177,7 +177,7 @@ main .bg--girl {
   align-items: center;
   justify-content: flex-end;
 }
-@media screen and (max-width: 759px) {
+@media screen and (max-width: 1100px) {
   .test__header-section .line {
     font-size: 10px;
   }
@@ -208,12 +208,35 @@ main .bg--girl {
   font-family: "CoreSans", serif;
 }
 .test__header-section--center h1 {
-  font-size: 30px;
+  font-size: 48px;
   margin-bottom: 20px;
+}
+@media screen and (max-width: 1050px) {
+  .test__header-section--center h1 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .test__header-section--center h1 {
+    font-size: 30px;
+  }
 }
 .test__header-section--center .dateplace {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+.test__header-section--center .dateplace span {
+  font-size: 28px;
+}
+@media screen and (max-width: 1050px) {
+  .test__header-section--center .dateplace span {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .test__header-section--center .dateplace span {
+    font-size: 16px;
+  }
 }
 .test__progress {
   margin-bottom: 20px;
