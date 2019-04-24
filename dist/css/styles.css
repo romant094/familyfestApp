@@ -14,7 +14,7 @@
   font-weight: 900;
 }
 body {
-  font-family: "OpenSans";
+  font-family: "OpenSans", serif;
   font-weight: 400;
 }
 
@@ -106,81 +106,158 @@ main {
   min-height: 100vh;
   height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
+  padding: 70px 0;
 }
-main .main-bg {
+main .bg {
   position: absolute;
-  display: block;
-  content: "";
-  bottom: 0;
+}
+main .bg img {
   width: 100%;
-  height: 382px;
-  background: url(../image/bg.png) center bottom 0 no-repeat;
-  opacity: 0.7;
-  z-index: 8;
-}
-main .main-bg--text {
-  background: none;
-  font-size: 54px;
-  line-height: 1.5;
-  font-family: "CoreSans";
-  color: #D7F1F2;
-  opacity: 0.4;
-  text-align: center;
   height: auto;
-  top: 25%;
-  z-index: 9;
+  display: block;
 }
-@media screen and (max-width: 1120px) {
-  main .main-bg--text {
-    font-size: 42px;
-  }
+main .bg--main {
+  z-index: 11;
+  background: url("../image/bg-polygon.png") no-repeat bottom 0 center;
+  height: 400px;
+  width: 100%;
+  bottom: 0;
 }
-@media screen and (max-width: 710px) {
-  main .main-bg--text {
-    font-size: 32px;
-  }
-}
-main .test {
+main .bg--boy {
   z-index: 10;
+  left: 15px;
+  bottom: 270px;
 }
-main .test__progress {
+main .bg--girl {
+  z-index: 10;
+  right: 0;
+  bottom: 160px;
+}
+
+.bg-col-red {
+  background-color: #ea5a58;
+}
+.bg-col-yellow {
+  background-color: #eec04c;
+}
+.bg-col-blue {
+  background-color: #00adc2;
+}
+.bg-col-green {
+  background-color: #009f7e;
+}
+
+.font-red {
+  color: #ea5a58;
+}
+.font-green {
+  color: #009f7e;
+  font-size: 10px;
+}
+.font-yellow {
+  color: #eec04c;
+}
+
+.test {
+  z-index: 20;
+}
+.test__header {
+  text-transform: uppercase;
+  font-family: OpenSans, serif;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.test__header-section .line {
+  color: #fff;
+  font-size: 12px;
+  padding: 8px 16px;
+  border-radius: 50px 0 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+@media screen and (max-width: 759px) {
+  .test__header-section .line {
+    font-size: 10px;
+  }
+}
+.test__header-section .line-revert {
+  border-radius: 0 50px 50px 0;
+  justify-content: flex-start;
+}
+.test__header-section .angle {
+  border: 20px solid transparent;
+}
+.test__header-section .angle-revert {
+  transform: rotate(180deg);
+}
+.test__header-section .angle-red {
+  border-left: 20px solid #ea5a58;
+}
+.test__header-section .angle-green {
+  border-left: 20px solid #009f7e;
+}
+.test__header-section .angle-yellow {
+  border-left: 20px solid #eec04c;
+}
+.test__header-section .angle-blue {
+  border-left: 20px solid #00adc2;
+}
+.test__header-section--center {
+  font-family: "CoreSans", serif;
+}
+.test__header-section--center h1 {
+  font-size: 30px;
   margin-bottom: 20px;
 }
-main .test__progress-current {
-  font-family: "CoreSans";
+.test__header-section--center .dateplace {
+  display: flex;
+  justify-content: space-between;
 }
-main .test__block {
+.test__progress {
+  margin-bottom: 20px;
+}
+.test__progress-current {
+  font-family: "CoreSans", serif;
+}
+.test__block {
   padding: 50px 10px;
   border: 1px solid #eee;
   border-radius: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.8);
 }
-main .test__block-content {
+.test__block-content {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-main .test__block-content .text {
+.test__block-content .text {
   font-size: 1.5rem;
 }
-main .test__block-content .text__question {
-  font-family: "CoreSans";
+.test__block-content .text__question {
+  font-family: "CoreSans", serif;
   font-weight: 900;
   margin-bottom: 2rem;
 }
-main .test__block-content .text__answers {
+.test__block-content .text__answers {
   margin-bottom: 1rem;
 }
-main .results__text {
+
+.results__text {
   font-size: 18px;
 }
-main .results__result {
+.results__result {
   font-size: 26px;
 }
-main .results__socials {
+.results__socials {
   display: flex;
+  align-items: center;
+}
+
+.results__socials--wrap {
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
