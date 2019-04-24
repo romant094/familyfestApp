@@ -109,7 +109,6 @@ const collectAnswers = () => {
             };
             let isAnswer = false;
             input.addEventListener('change', function () {
-                console.log(this);
                 if (this.getAttribute('type') === 'radio') {
                     answers[key - 1].answers[0] = {
                         value: this.value,
