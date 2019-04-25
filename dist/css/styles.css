@@ -109,6 +109,11 @@ main {
   position: relative;
   padding: 70px 0;
 }
+@media screen and (max-width: 1366px) {
+  main {
+    padding: 20px 0;
+  }
+}
 main .bg {
   position: absolute;
 }
@@ -119,22 +124,25 @@ main .bg img {
 }
 main .bg--main {
   z-index: 11;
-  background: url("../image/bg-polygon.png") no-repeat bottom 0 center;
-  height: 400px;
+  background-image: url("../image/bg-polygon.png");
+  background-position: bottom 0 center;
+  background-repeat: no-repeat;
+  height: 200px;
+  background-position: bottom -150px center;
   width: 100%;
   bottom: 0;
 }
 main .bg--boy {
   z-index: 10;
   left: 15px;
-  bottom: 270px;
+  bottom: 30px;
 }
 main .bg--girl {
   z-index: 10;
   right: 0;
-  bottom: 160px;
+  bottom: 0;
+  max-width: 325px;
 }
-
 .bg-col-red {
   background-color: #ea5a58;
 }

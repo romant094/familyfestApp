@@ -136,6 +136,9 @@ main {
   position: relative;
   padding: 70px 0;
 
+  @media screen and (max-width: 1366px) {
+    padding: 20px 0;
+  }
 
   .bg {
     position: absolute;
@@ -148,22 +151,38 @@ main {
 
     &--main {
       z-index: 11;
-      background: url("../image/bg-polygon.png") no-repeat bottom 0 center;
-      height: 400px;
+      background-image: url("../image/bg-polygon.png");
+      background-position: bottom 0 center;
+      background-repeat: no-repeat;
+      height: 200px;
+      background-position: bottom -150px center;
       width: 100%;
       bottom: 0;
+
+      @media screen and (max-width: 1366px) {
+
+      }
     }
 
     &--boy {
       z-index: 10;
       left: 15px;
-      bottom: 270px;
+      bottom: 30px;
+
+      @media screen and (max-width: 1366px) {
+
+      }
     }
 
     &--girl {
       z-index: 10;
       right: 0;
-      bottom: 160px;
+      bottom: 0;
+      max-width: 325px;
+
+      @media screen and (max-width: 1366px) {
+
+      }
     }
   }
 }
