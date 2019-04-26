@@ -198,6 +198,9 @@ const countAnswers = () => {
     })
 };
 
+const routeTypeOne = d.querySelector('#route-type-one'),
+    routeTypeTwo = d.querySelector('#route-type-two');
+
 const renderResults = () => {
     // correctAnswers = 9;
     let resultText = '';
@@ -215,6 +218,9 @@ const renderResults = () => {
     const firstAnswer = answers[0].answers[0],
         secondAnswer = answers[1].answers[0];
 
+    routeTypeOne.classList.remove('disabled');
+    routeTypeTwo.classList.add('disabled');
+
     if (firstAnswer.value === '2') {
         renderRoutes(routeLinks[0], 1);
     }
@@ -225,20 +231,13 @@ const renderResults = () => {
         renderRoutes(routeLinks[0], 3);
     }
     if (firstAnswer.value === '1' && secondAnswer.value === '3') {
-        renderRoutes(routeLinks[0], 2);
-        renderRoutes(routeLinks[1], 3);
+        routeTypeOne.classList.add('disabled');
+        routeTypeTwo.classList.remove('disabled');
     }
 };
 
 const renderRoutes = (routeLink, routeNum) => {
     routeLink.setAttribute('href', `pdf/route_${routeNum}.pdf`);
-    if (routeLink.querySelector('span')) {
-        routeLink.querySelector('span').textContent = routeNum;
-    }
-    // console.log(routeLink);
-    if (routeLink === routeLinks[1]) {
-        routeLink.classList.remove('disabled');
-    }
 };
 
 // Dev functions
